@@ -1026,12 +1026,14 @@ Syncing code ...
 <p>If you are not familiar with what
 <code class="codehilite">echo &#39;Hello, world!&#39; &gt; /output/hello.txt</code> does, here's a quick
 explanation:</p>
-<p>The <code class="codehilite">echo &#39;Hello, world!&#39;</code> part outputs the string <code class="codehilite">Hello, world!</code>. The <code class="codehilite">&gt;</code>
-part of the command redirects the printed output of <code class="codehilite">echo ‘Hello, world!&#39;</code>
-(which is, of course, <code class="codehilite">Hello world!</code>) to the file specified after the <code class="codehilite">&gt;</code>.
-In this case, we redirect to a file located at <code class="codehilite">/output/hello.txt</code>.
-Because <code class="codehilite">hello.txt</code> is in the <code class="codehilite">/output</code> directory, it will be preserved for
-future reference and use.</p>
+<ul>
+<li>The <code class="codehilite">echo &#39;Hello, world!&#39;</code> part outputs the string <code class="codehilite">Hello, world!</code>.</li>
+<li>The <code class="codehilite">&gt;</code> part of the command redirects the printed output of <code class="codehilite">echo &#39;Hello, world!&#39;</code>
+  (which is, of course, <code class="codehilite">Hello world!</code>) to the file specified after the <code class="codehilite">&gt;</code>.</li>
+<li>The <code class="codehilite">/output/hello.txt</code> part of the command specifies where the <code class="codehilite">Hello,world!</code> should be written to: <code class="codehilite">/output/hello.txt</code>. Because <code class="codehilite">hello.txt</code> is
+  in the <code class="codehilite">/output</code> directory, it will be preserved for future reference and
+  use.</li>
+</ul>
 </div>
 <h4 id="example-2">Example 2<a class="headerlink" href="#example-2" title="Permanent link">&para;</a></h4>
 <p>In this example, we'll use Python to save some data to a file in the <code class="codehilite">/output</code>
@@ -1064,7 +1066,7 @@ useful and realistic.</p>
 <p>Here is a sample Tensorflow example that saves a model checkpoint. Because we
 write (save) the data to the <code class="codehilite">/output</code> directory, we'll be able to use it
 later. A future job can use this model checkpoint as a starting point.
-Consider this partial code, and note the call to <code class="codehilite">saver.save(sess,‘/output/model.ckpt&#39;)</code>:</p>
+Consider this partial code, and note the call to <code class="codehilite">saver.save(sess,&#39;/output/model.ckpt&#39;)</code>:</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 
 <span class="o">...</span>
