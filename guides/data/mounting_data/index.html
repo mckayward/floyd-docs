@@ -1,0 +1,1259 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://www.floydhub.com/guides/data/mounting_data/">
+      
+      
+        <meta name="author" content="FloydHub Team">
+      
+      
+        <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
+    
+    
+      
+        <title>Mounting data - FloydHub</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Source+Code+Pro">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../css/bootstrap_paper.min.css">
+    
+      <link rel="stylesheet" href="../../../css/style.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="https://www.floydhub.com" title="FloydHub" class="md-logo md-header-nav__button">
+            <img src="../../../img/f_white_rect_small.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Data
+                </span>
+              
+            
+            Mounting data
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/floydhub/floyd-docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../../../img/f_white_rect_small.png">
+      </i>
+    
+    FloydHub
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/floydhub/floyd-docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Get Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Get Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Basics
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Basics
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      Install Floyd CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      Login using Floyd CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      Create new Project and Dataset
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
+      Delete Project, Jobs and Data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
+      Using CPU vs GPU
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Jobs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Jobs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      Installing extra dependencies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../jobs/tensorboard/" title="Enabling Tensorboard" class="md-nav__link">
+      Enabling Tensorboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../floyd_ignore/" title="Ignore files" class="md-nav__link">
+      Ignore files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../storing_output/" title="Storing output data" class="md-nav__link">
+      Storing output data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Mounting data
+      </label>
+    
+    <a href="./" title="Mounting data" class="md-nav__link md-nav__link--active">
+      Mounting data
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" title="Datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
+    Mounting datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
+    Mounting the output of another job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
+    Mounting multiple datasources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symlinking-your-mounted-data" title="Symlinking your mounted data" class="md-nav__link">
+    Symlinking your mounted data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
+    Datasource name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mount-point" title="Mount point" class="md-nav__link">
+    Mount point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
+    Default mount points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
+      Symlink mounted data
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+      Style Transfer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../examples/deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
+      Deep Text Corrector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Troubleshooting & FAQs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Troubleshooting & FAQs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/authentication/" title="Signup and Login" class="md-nav__link">
+      Signup and Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/job/" title="Job" class="md-nav__link">
+      Job
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/plans/" title="Plans" class="md-nav__link">
+      Plans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../faqs/billing/" title="Billing" class="md-nav__link">
+      Billing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Floyd CLI Commands
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Floyd CLI Commands
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/" title="floyd" class="md-nav__link">
+      floyd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/login/" title="floyd login" class="md-nav__link">
+      floyd login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/init/" title="floyd init" class="md-nav__link">
+      floyd init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/run/" title="floyd run" class="md-nav__link">
+      floyd run
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/data/" title="floyd data" class="md-nav__link">
+      floyd data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/logs/" title="floyd logs" class="md-nav__link">
+      floyd logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/status/" title="floyd status" class="md-nav__link">
+      floyd status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/output/" title="floyd output" class="md-nav__link">
+      floyd output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/clone/" title="floyd clone" class="md-nav__link">
+      floyd clone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/info/" title="floyd info" class="md-nav__link">
+      floyd info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/stop/" title="floyd stop" class="md-nav__link">
+      floyd stop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/delete/" title="floyd delete" class="md-nav__link">
+      floyd delete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/logout/" title="floyd logout" class="md-nav__link">
+      floyd logout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
+      floyd upgrade
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../commands/version/" title="floyd version" class="md-nav__link">
+      floyd version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Changelogs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Changelogs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelogs/1/" title="July 12 2017" class="md-nav__link">
+      July 12 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datasets" title="Datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
+    Mounting datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
+    Mounting the output of another job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
+    Mounting multiple datasources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symlinking-your-mounted-data" title="Symlinking your mounted data" class="md-nav__link">
+    Symlinking your mounted data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
+    Datasource name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mount-point" title="Mount point" class="md-nav__link">
+    Mount point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
+    Default mount points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/data/mounting_data.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
+                
+                  <h1>Mounting data</h1>
+                
+                <p>In this guide, we will explain how to attach a datasource to your job.</p>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h2>
+<p>Floyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow 
+<a href="../../basics/create_new/#create-a-new-dataset">this guide</a>. You can view the datasets you 
+have created in the <a href="https://www.floydhub.com/datasets">datasets page</a> in the dashboard. You can also view 
+public datasets by searching for it on FloydHub.</p>
+<h2 id="mounting-datasets">Mounting datasets<a class="headerlink" href="#mounting-datasets" title="Permanent link">&para;</a></h2>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<p>You can mount one or more datasets when you run a job using the <a href="../../../commands/run">floyd run</a> command. 
+This automatically makes the mounted datasets available for you to use in your job, without having to download them each time.</p>
+<p>To mount a specific version of a dataset, you need to specify its <a href="#datasource-name">full name</a> and the <a href="#mount-point">mount point</a>. 
+The syntax is <code class="codehilite">--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
+<p>For example, to mount the <a href="https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1">VGG 19-layers</a> dataset under <code class="codehilite">/vgg</code>:
+<div class="codehilite"><pre><span></span>floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
+</pre></div></p>
+<p>This will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under <code class="codehilite">/vgg</code>.</p>
+<p><img alt="Mounted Data" src="../../../img/mounted_data.jpg" /></p>
+<p><em>Note</em>: You can use the <code class="codehilite">--data</code> flag with <code class="codehilite">floyd run</code> when you are running a command too.</p>
+<div class="codehilite"><pre><span></span>$ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+<h3 id="mounting-the-output-of-another-job">Mounting the output of another job<a class="headerlink" href="#mounting-the-output-of-another-job" title="Permanent link">&para;</a></h3>
+<p>In FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.</p>
+<p>You can refer to the output of a job by its name with <code class="codehilite">/output</code> appended to it.</p>
+<p>For example: <code class="codehilite">floydhub/projects/handwriting-recognition/12/output</code> refers to the output of the job <code class="codehilite">floydhub/projects/handwriting-recognition/12</code></p>
+<p>You can mount this using the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command, similar to datasets. For example:</p>
+<div class="codehilite"><pre><span></span>$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+<p>This will make the output of <code class="codehilite">floydhub/projects/handwriting-recognition/12</code> available at <code class="codehilite">/filtered_training_data</code> for the new job to use.</p>
+<p><em>Note</em>: You need to have access to the job to be able to mount it's output.</p>
+<h3 id="mounting-multiple-datasources">Mounting multiple datasources<a class="headerlink" href="#mounting-multiple-datasources" title="Permanent link">&para;</a></h3>
+<p>You can attach upto 5 datasources when you run a job using the <code class="codehilite">--data</code> flag in the <a href="../../../commands/run">floyd run</a> command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.</p>
+<p><div class="codehilite"><pre><span></span>$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test <span class="s2">&quot;python script.py&quot;</span>
+</pre></div>
+In this case, the above datasets will be mounted at <code class="codehilite">/training</code> and <code class="codehilite">/test</code> respectively.</p>
+<h3 id="web-dashboard">Web dashboard<a class="headerlink" href="#web-dashboard" title="Permanent link">&para;</a></h3>
+<p>You can view the mounted datasets and their respective mount points for a specific job by going to the <code class="codehilite">Data</code> tab:</p>
+<p><img alt="Data Mounts" src="../../../img/job_data_view.jpg" /></p>
+<h3 id="symlinking-your-mounted-data">Symlinking your mounted data<a class="headerlink" href="#symlinking-your-mounted-data" title="Permanent link">&para;</a></h3>
+<p>Sometimes, your code might require your data to be available at a hardcoded location. Or you might want to combine multiple mounted datasources under a single directory. One way to do this would be to copy the data from the mounted locations to the destination, but this is inefficient for large data. <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symlinking</a> is a great solution for this.</p>
+<p>Please see this guide: <a href="../symlink_mounted_data">Symlinking mounted data</a></p>
+<h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
+<h4 id="datasource-name">Datasource name<a class="headerlink" href="#datasource-name" title="Permanent link">&para;</a></h4>
+<p>The full name of a datasource (<code class="codehilite">&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>) consists of 3 parts: </p>
+<ul>
+<li>Username</li>
+<li>Dataset Name</li>
+<li>Version</li>
+</ul>
+<p>For example: <code class="codehilite">floydhub/datasets/mnist/2</code></p>
+<h4 id="mount-point">Mount point<a class="headerlink" href="#mount-point" title="Permanent link">&para;</a></h4>
+<p>The mount point is the name of the directory under which the datasource will be available in your job. </p>
+<ul>
+<li>It <em>cannot</em> contain subdirectories. <code class="codehilite">vgg</code> is a valid mount point, but <code class="codehilite">vgg/2017</code> is not.</li>
+<li>The mount point is an absolute path. For example, <code class="codehilite">--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg</code> will mount the data at <code class="codehilite">/vgg</code>. A common mistake is to look for the mounted data in the current directory (<code class="codehilite">./vgg</code>), rather than using the absolute path (<code class="codehilite">/vgg</code>)</li>
+</ul>
+<h4 id="default-mount-points">Default mount points<a class="headerlink" href="#default-mount-points" title="Permanent link">&para;</a></h4>
+<p>We highly recommend that you explicitly specify the mount points for your data using the <code class="codehilite">--data &lt;data_name&gt;:&lt;mount_point&gt;</code> convention.</p>
+<p>If, however, you do not specify a mount point, the default values are:</p>
+<ul>
+<li>
+<p>Single data mount: If you only mount one datasource without specifying a mount point, it is mounted at <code class="codehilite">/input</code></p>
+</li>
+<li>
+<p>Multiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g. <code class="codehilite">/xKduBzTr4LAsc6eVPZVPVd</code>). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.</p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../storing_output/" title="Storing output data" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Storing output data
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../symlink_mounted_data/" title="Symlink mounted data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Symlink mounted data
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Floyd Labs Inc.
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/floydhub" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/floydhub_" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

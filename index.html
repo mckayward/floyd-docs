@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://www.floydhub.com/">
@@ -13,17 +14,23 @@
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="./assets/images/favicon.ico">
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
     
     
       
-        <title>Home - FloydHub</title>
+        <title>FloydHub</title>
       
     
     
-      <script src="./assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="./assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-02c2a4388f.palette.css">
+      
     
     
       
@@ -36,15 +43,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application-f3ab63f78a.css">
-      
-        <link rel="stylesheet" href="./assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="./css/bootstrap_paper.min.css">
-      
-        <link rel="stylesheet" href="./css/style.css">
-      
+      <link rel="stylesheet" href="./css/bootstrap_paper.min.css">
+    
+      <link rel="stylesheet" href="./css/style.css">
     
     
   </head>
@@ -66,15 +67,15 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="FloydHub" class=" md-logo  md-header-nav__button">
-          
-            <img src="./img/f_white_small.png" width="24" height="24">
-          
-        </a>
+        
+          <a href="https://www.floydhub.com" title="FloydHub" class="md-logo md-header-nav__button">
+            <img src="./img/f_white_rect_small.png" width="24" height="24">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -93,26 +94,32 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
           <div class="md-header-nav__source">
             
-              
 
 
   
@@ -131,14 +138,16 @@
     </div>
   </a>
 
-            
           </div>
-      </div>
+        </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -146,13 +155,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
-        <img src="./img/f_white_small.png">
-      
-    </i>
+    
+      <i class="md-logo md-nav__button">
+        <img src="./img/f_white_rect_small.png">
+      </i>
+    
     FloydHub
   </label>
   
@@ -182,7 +191,12 @@
     
       
       
-  <li class="md-nav__item">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -204,11 +218,54 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-floydhub-documentation" title="Welcome to Floydhub Documentation" class="md-nav__link">
-    Welcome to Floydhub Documentation
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning-without-the-devops" title="Deep learning without the DevOps:" class="md-nav__link">
+    Deep learning without the DevOps:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frictionless-data-science" title="Frictionless data science" class="md-nav__link">
+    Frictionless data science
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powerful-workflow-tools" title="Powerful workflow tools" class="md-nav__link">
+    Powerful workflow tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-learning-community" title="Deep learning community" class="md-nav__link">
+    Deep learning community
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#were-here-to-help" title="We're here to help!" class="md-nav__link">
+    We're here to help!
+  </a>
+  
+</li>
+      
+      
       
     </ul>
   
@@ -219,6 +276,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -226,7 +286,7 @@
     <label class="md-nav__link" for="nav-2">
       Get Started
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         Get Started
       </label>
@@ -235,78 +295,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="home/install/" title="Installation" class="md-nav__link">
-        Installation
-      </a>
-    
+    <a href="getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="home/getting_started/" title="First Floyd Project" class="md-nav__link">
-        First Floyd Project
-      </a>
-    
-  </li>
+          
 
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="home/using_datasets/" title="Using Datasets" class="md-nav__link">
-        Using Datasets
-      </a>
-    
-  </li>
 
-        
-          
-          
   <li class="md-nav__item">
-    
-      <a href="home/managing_output/" title="Managing Output" class="md-nav__link">
-        Managing Output
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="home/installing_dependencies/" title="Installing Dependencies" class="md-nav__link">
-        Installing Dependencies
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="home/environments/" title="Environments" class="md-nav__link">
-        Environments
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="home/floyd_ignore/" title="FloydIgnore" class="md-nav__link">
-        FloydIgnore
-      </a>
-    
+    <a href="getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
   </li>
 
         
@@ -317,83 +324,80 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
-      Guides
+      Basics
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        Guides
+        Basics
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="guides/jupyter/" title="Jupyter Notebook" class="md-nav__link">
-        Jupyter Notebook
-      </a>
-    
+    <a href="guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      Install Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="guides/style_transfer/" title="Style Transfer" class="md-nav__link">
-        Style Transfer
-      </a>
-    
+    <a href="guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      Login using Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="guides/deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
-        Deep Text Corrector
-      </a>
-    
+    <a href="guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      Create new Project and Dataset
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="guides/cyclegan/" title="CycleGAN" class="md-nav__link">
-        CycleGAN
-      </a>
-    
+    <a href="guides/basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
+      Delete Project, Jobs and Data
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="guides/datasets/" title="Public Datasets" class="md-nav__link">
-        Public Datasets
-      </a>
-    
-  </li>
+          
 
-        
-          
-          
+
   <li class="md-nav__item">
-    
-      <a href="guides/contributing/" title="Contributing" class="md-nav__link">
-        Contributing
-      </a>
-    
+    <a href="guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
+      Using CPU vs GPU
+    </a>
   </li>
 
         
@@ -404,171 +408,68 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Commands
+      Jobs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Commands
+        Jobs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="commands/" title="floyd" class="md-nav__link">
-        floyd
-      </a>
-    
+    <a href="guides/jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      Installing extra dependencies
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="commands/login/" title="floyd login" class="md-nav__link">
-        floyd login
-      </a>
-    
+    <a href="guides/jobs/tensorboard/" title="Enabling Tensorboard" class="md-nav__link">
+      Enabling Tensorboard
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="commands/init/" title="floyd init" class="md-nav__link">
-        floyd init
-      </a>
-    
+    <a href="guides/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
-    
-      <a href="commands/run/" title="floyd run" class="md-nav__link">
-        floyd run
-      </a>
-    
-  </li>
+          
 
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/data/" title="floyd data" class="md-nav__link">
-        floyd data
-      </a>
-    
-  </li>
 
-        
-          
-          
   <li class="md-nav__item">
-    
-      <a href="commands/logs/" title="floyd logs" class="md-nav__link">
-        floyd logs
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/status/" title="floyd status" class="md-nav__link">
-        floyd status
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/output/" title="floyd output" class="md-nav__link">
-        floyd output
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/info/" title="floyd info" class="md-nav__link">
-        floyd info
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/stop/" title="floyd stop" class="md-nav__link">
-        floyd stop
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/delete/" title="floyd delete" class="md-nav__link">
-        floyd delete
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/logout/" title="floyd logout" class="md-nav__link">
-        floyd logout
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/upgrade/" title="floyd upgrade" class="md-nav__link">
-        floyd upgrade
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="commands/version/" title="floyd version" class="md-nav__link">
-        floyd version
-      </a>
-    
+    <a href="guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
+      Ignore files
+    </a>
   </li>
 
         
@@ -579,39 +480,56 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Floydhub
+      Data
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
-        Floydhub
+        Data
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="floydhub/privacy/" title="Privacy" class="md-nav__link">
-        Privacy
-      </a>
-    
+    <a href="guides/data/storing_output/" title="Storing output data" class="md-nav__link">
+      Storing output data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="floydhub/terms/" title="Terms of Service" class="md-nav__link">
-        Terms of Service
-      </a>
-    
+    <a href="guides/data/mounting_data/" title="Mounting data" class="md-nav__link">
+      Mounting data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="guides/data/symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
+      Symlink mounted data
+    </a>
   </li>
 
         
@@ -622,12 +540,385 @@
     
       
       
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Examples
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Examples
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
+    <a href="examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+      Style Transfer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="examples/deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
+      Deep Text Corrector
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
     
-      <a href="faq/" title="FAQs" class="md-nav__link">
-        FAQs
-      </a>
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Troubleshooting & FAQs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Troubleshooting & FAQs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/installation/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/authentication/" title="Signup and Login" class="md-nav__link">
+      Signup and Login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/job/" title="Job" class="md-nav__link">
+      Job
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/plans/" title="Plans" class="md-nav__link">
+      Plans
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faqs/billing/" title="Billing" class="md-nav__link">
+      Billing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Floyd CLI Commands
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Floyd CLI Commands
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/" title="floyd" class="md-nav__link">
+      floyd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/login/" title="floyd login" class="md-nav__link">
+      floyd login
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/init/" title="floyd init" class="md-nav__link">
+      floyd init
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/run/" title="floyd run" class="md-nav__link">
+      floyd run
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/data/" title="floyd data" class="md-nav__link">
+      floyd data
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/logs/" title="floyd logs" class="md-nav__link">
+      floyd logs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/status/" title="floyd status" class="md-nav__link">
+      floyd status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/output/" title="floyd output" class="md-nav__link">
+      floyd output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/clone/" title="floyd clone" class="md-nav__link">
+      floyd clone
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/info/" title="floyd info" class="md-nav__link">
+      floyd info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/stop/" title="floyd stop" class="md-nav__link">
+      floyd stop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/delete/" title="floyd delete" class="md-nav__link">
+      floyd delete
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/logout/" title="floyd logout" class="md-nav__link">
+      floyd logout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/upgrade/" title="floyd upgrade" class="md-nav__link">
+      floyd upgrade
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="commands/version/" title="floyd version" class="md-nav__link">
+      floyd version
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Changelogs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Changelogs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="changelogs/1/" title="July 12 2017" class="md-nav__link">
+      July 12 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -650,11 +941,54 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#welcome-to-floydhub-documentation" title="Welcome to Floydhub Documentation" class="md-nav__link">
-    Welcome to Floydhub Documentation
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-learning-without-the-devops" title="Deep learning without the DevOps:" class="md-nav__link">
+    Deep learning without the DevOps:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frictionless-data-science" title="Frictionless data science" class="md-nav__link">
+    Frictionless data science
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powerful-workflow-tools" title="Powerful workflow tools" class="md-nav__link">
+    Powerful workflow tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-learning-community" title="Deep learning community" class="md-nav__link">
+    Deep learning community
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#were-here-to-help" title="We're here to help!" class="md-nav__link">
+    We're here to help!
+  </a>
+  
+</li>
+      
+      
       
     </ul>
   
@@ -666,20 +1000,43 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                   <h1>Home</h1>
                 
-                <h2 id="welcome-to-floydhub-documentation">Welcome to Floydhub Documentation</h2>
-<p><a href="https://www.floydhub.com/">Floydhub</a> is Heroku for Deep Learning. A Platform-as-a-Service 
-for training and deploying your models in the cloud with a few simple commands. </p>
-<p>Click <a href="home/getting_started/">here</a> to get started.</p>
-<p>Also visit the <a href="https://forum.floydhub.com">FloydHub Forum</a> for discussions, feature requests 
-and help from the community.</p>
-<p>Questions? Reach out to us at <a href="mailto:contact@floydhub.com">contact@floydhub.com</a></p>
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Welcome to <a href="https://www.floydhub.com/">FloydHub</a>! Here you'll find comprehensive information for training and deploying your deep learning and AI applications with our platform. We do our best to make this documentation clear and user friendly, but if you have unanswered questions, please visit the <a href="https://forum.floydhub.com/">community forum</a> or <a href="mailto:support@floydhub.com">contact us</a>.</p>
+<p>The fastest way to get up and running is to use our <a href="http://docs.floydhub.com/getstarted/quick_start">quickstart guide</a>, which walks through an entire FloydHub training job step-by-step. You'll create a new Project on the FloydHub web dashboard, connect it to a local directory on your computer, and then kick-off a job using the FloydHub CLI to train your deep learning model on FloydHub's GPU servers.</p>
+<h2 id="deep-learning-without-the-devops">Deep learning without the DevOps:<a class="headerlink" href="#deep-learning-without-the-devops" title="Permanent link">&para;</a></h2>
+<h3 id="frictionless-data-science">Frictionless data science<a class="headerlink" href="#frictionless-data-science" title="Permanent link">&para;</a></h3>
+<p>Why worry about provisioning GPUs, installing drivers, or managing software dependency hell? With FloydHub, we take care of your entire deep learning DevOps workflow - so you can focus on the science.</p>
+<p>Training a TensorFlow model using GPUs on the cloud is as simple as executing this command on your terminal: 
+<code class="codehilite">floyd run --gpu --env tensorflow &quot;python train.py&quot;</code>. Try it now with our <a href="http://docs.floydhub.com/getstarted/quick_start">quickstart guide</a>.</p>
+<h3 id="powerful-workflow-tools">Powerful workflow tools<a class="headerlink" href="#powerful-workflow-tools" title="Permanent link">&para;</a></h3>
+<p>Whether you're using our web dashboard or our command line interface, our tools make your work easier and your team more productive:</p>
+<ul>
+<li><a href="http://docs.floydhub.com/getstarted/quick_start_jupyter/">Interactive Jupyter Notebook support</a></li>
+<li>End-to-end version control for data science</li>
+<li>Full reproducibility of jobs</li>
+<li>Deploy models as REST endpoints to integrate with your apps</li>
+</ul>
+<h3 id="deep-learning-community">Deep learning community<a class="headerlink" href="#deep-learning-community" title="Permanent link">&para;</a></h3>
+<p>FloydHub hosts open source Projects and Datasets that you can discover, clone, and reproduce (or reconfigure with your own Dataset).</p>
+<p>Try it now with the <a href="http://docs.floydhub.com/examples/style_transfer/">Neural Style Transfer</a>.</p>
+<p><img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px"></p>
+<h2 id="were-here-to-help">We're here to help!<a class="headerlink" href="#were-here-to-help" title="Permanent link">&para;</a></h2>
+<p>We're always happy to help with any questions you might have! <a href="http://docs.floydhub.com/">Search</a> our documentation or check answers to <a href="http://docs.floydhub.com/faqs/installation/">frequently asked questions</a>. The <a href="https://forum.floydhub.com/">FloydHub community forum</a> is another place to ask questions, request features, or share cool Projects. For more help, <a href="./(mailto:support@floydhub.com)">send us an email</a>.</p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -693,13 +1050,13 @@ and help from the community.</p>
       <nav class="md-footer-nav__inner md-grid">
         
         
-          <a href="home/install/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="getstarted/quick_start/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation
+                Quick Start
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -743,8 +1100,10 @@ and help from the community.</p>
       
     </div>
     
-      <script src="./assets/javascripts/application-2afe21e0b2.js"></script>
-      <script>var config={url:{base:"."}},app=new Application(config);app.initialize()</script>
+      <script src="./assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"."}})</script>
       
     
     
