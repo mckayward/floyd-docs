@@ -487,6 +487,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#viewing-saved-output-data" title="Viewing Saved Output Data" class="md-nav__link">
+    Viewing Saved Output Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-output-as-a-data-source" title="Using output as a data source" class="md-nav__link">
     Using output as a data source
   </a>
@@ -969,6 +976,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#viewing-saved-output-data" title="Viewing Saved Output Data" class="md-nav__link">
+    Viewing Saved Output Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-output-as-a-data-source" title="Using output as a data source" class="md-nav__link">
     Using output as a data source
   </a>
@@ -1081,9 +1095,10 @@ Consider this partial code, and note the call to <code class="codehilite">saver.
 </pre></div>
 
 <p>Because model is stored under the special <code class="codehilite">/output</code> directory, it will be saved
-even after your job ends, and can be used again in future jobs. You can view
-this output using the <code class="codehilite">floyd output</code> command:</p>
-<div class="codehilite"><pre><span></span>$ floyd output floydhub/projects/quick-start/1/output
+even after your job ends, and can be used again in future jobs.</p>
+<h4 id="viewing-saved-output-data">Viewing Saved Output Data<a class="headerlink" href="#viewing-saved-output-data" title="Permanent link">&para;</a></h4>
+<p>You can view the saved output of a job using the <code class="codehilite">floyd output</code> command:</p>
+<div class="codehilite"><pre><span></span>$ floyd output floydhub/projects/quick-start/1/
 Opening output directory in your browser...
 </pre></div>
 
