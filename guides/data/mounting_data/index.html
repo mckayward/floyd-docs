@@ -1170,11 +1170,11 @@ significant amount of time on each job.</p>
 <h3 id="mounting-a-dataset">Mounting a Dataset<a class="headerlink" href="#mounting-a-dataset" title="Permanent link">&para;</a></h3>
 <h4 id="what-does-it-mean-to-mount-a-dataset-to-a-job">What does it mean to "mount" a dataset to a job?<a class="headerlink" href="#what-does-it-mean-to-mount-a-dataset-to-a-job" title="Permanent link">&para;</a></h4>
 <p>In the world of file systems, the term "mount" means to attach one file system
-or folder to another. For example, when you insert a flash drive (which is a
-mini file system) into your computer, its file system gets mounted to your
-computer's main file system so that you can retrieve, remove, or save data to
-the flash drive. Once the flash drive is mounted to your computer's file
-system, other programs can access it as if it were a native part of your
+or folder to another file system. For example, when you insert a flash drive
+(which is a mini file system) into your computer, its file system gets mounted
+to your computer's main file system so that you can retrieve, remove, or save
+data to the flash drive. Once the flash drive is mounted to your computer's
+file system, other programs can access it as if it were a native part of your
 computer's file system. This same mounting pattern is how datasets are handled
 on FloydHub.</p>
 <p>When you use the <code class="codehilite">floyd run</code> command to run a job, your code will be sent up to
@@ -1243,8 +1243,8 @@ This allows you to iterate on the ouput of a past job.</p>
 <p>You can refer to the output of a job by its name with <code class="codehilite">/output</code> appended to it.
 For example: <code class="codehilite">floydhub/projects/handwriting-recognition/12/output</code> refers to
 the output of the job <code class="codehilite">floydhub/projects/handwriting-recognition/12</code></p>
-<p>Mount past output using the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command, just as
-you would with a dataset to datasets. For example:
+<p>Use the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command, mount past output to a job,
+just as you would to mount a dataset. For example:
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
   --data floydhub/projects/handwriting-recognition/12:filtered_training_data <span class="se">\</span>
   <span class="s2">&quot;python train.py&quot;</span>
