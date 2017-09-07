@@ -487,6 +487,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#viewing-saved-output-data" title="Viewing Saved Output Data" class="md-nav__link">
+    Viewing Saved Output Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-output-as-a-data-source" title="Using output as a data source" class="md-nav__link">
     Using output as a data source
   </a>
@@ -969,6 +976,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#viewing-saved-output-data" title="Viewing Saved Output Data" class="md-nav__link">
+    Viewing Saved Output Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-output-as-a-data-source" title="Using output as a data source" class="md-nav__link">
     Using output as a data source
   </a>
@@ -1002,16 +1016,16 @@
                   <h1>Storing output data</h1>
                 
                 <h4 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h4>
-<p>Saving information generated during a run is easy.</p>
+<p>Saving information generated during a job is easy.</p>
 <p>On a FloydHub deep learning server your code has access to a directory called
 <code class="codehilite">/output</code>. The <code class="codehilite">/output</code> directory is a special directory that is used to store
 information you want to save for future use after a job finishes. Anything
-saved in the <code class="codehilite">/output</code> directory at the time a run finishes will be preserved
+saved in the <code class="codehilite">/output</code> directory at the time a job finishes will be preserved
 and can be accessed and reused later.</p>
 <p>The most common thing users save is model checkpoints, but anything that ends
-up in the <code class="codehilite">/output</code> directory at the end of a run will be saved (use your
+up in the <code class="codehilite">/output</code> directory at the end of a job will be saved (use your
 imagination!).</p>
-<p>Let's work through a couple of examples to see how to save data during a run.</p>
+<p>Let's work through a couple of examples to see how to save data during a job.</p>
 <h4 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
 <p>This job prints the string "Hello, world!", and saves it to a file called
 <code class="codehilite">hello.txt</code>. Because <code class="codehilite">hello.txt</code> is located in the <code class="codehilite">/output</code> directory, it will
@@ -1081,9 +1095,10 @@ Consider this partial code, and note the call to <code class="codehilite">saver.
 </pre></div>
 
 <p>Because model is stored under the special <code class="codehilite">/output</code> directory, it will be saved
-even after your job ends, and can be used again in future jobs. You can view
-this output using the <code class="codehilite">floyd output</code> command:</p>
-<div class="codehilite"><pre><span></span>$ floyd output floydhub/projects/quick-start/1/output
+even after your job ends, and can be used again in future jobs.</p>
+<h4 id="viewing-saved-output-data">Viewing Saved Output Data<a class="headerlink" href="#viewing-saved-output-data" title="Permanent link">&para;</a></h4>
+<p>You can view the saved output of a job using the <code class="codehilite">floyd output</code> command:</p>
+<div class="codehilite"><pre><span></span>$ floyd output floydhub/projects/quick-start/1/
 Opening output directory in your browser...
 </pre></div>
 
