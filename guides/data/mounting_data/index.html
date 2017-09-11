@@ -1238,12 +1238,19 @@ respectively.</p>
 specific job by going to the Data tab:</p>
 <p><img alt="Data Mounts" src="../../../img/job_data_view.jpg" /></p>
 <h3 id="symlinking-your-mounted-data">Symlinking your mounted data<a class="headerlink" href="#symlinking-your-mounted-data" title="Permanent link">&para;</a></h3>
-<p>Sometimes, your code might require your data to be available at a hardcoded
-location. Or you might want to combine multiple mounted datasources under a
-single directory. One way to do this would be to copy the data from the mounted
-locations to the destination, but this is inefficient for large data.
-Symlinking is a great solution for this.
-Please see this guide: <a href="../symlink_mounted_data">Symlinking mounted data</a></p>
+<p>Floydhub's basic data-mounting functionality is sufficient for most users'
+needs. However, if you find yourself with more complex requirements, symlinking
+can almost certainly provide a solution.</p>
+<p>Here are some common FloydHub data-mounting needs that symlinking can solve:</p>
+<ul>
+<li>Code requires the data to be available at a location that is not valid with
+    the mounting syntax of <code class="codehilite">floyd run --data</code>.</li>
+<li>Multiple mounted datasources need to be available under a single directory.</li>
+<li>Directories in a single datasource need to be split into their own
+    locations.</li>
+</ul>
+<p>For documentation on symlinking, please see this guide: <a href="../symlink_mounted_data">Symlinking mounted
+data</a></p>
 <h3 id="understanding-dataset-names">Understanding dataset names<a class="headerlink" href="#understanding-dataset-names" title="Permanent link">&para;</a></h3>
 <p>The full name of a datasource (<code class="codehilite">&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>)
 consists of three parts:</p>
