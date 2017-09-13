@@ -242,6 +242,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../getstarted/core_concepts/" title="Core concepts" class="md-nav__link">
+      Core concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../getstarted/qs/" title="Quick Start New" class="md-nav__link">
+      Quick Start New
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
       Jupyter Notebook
     </a>
@@ -260,7 +284,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Basics
@@ -344,7 +368,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Jobs
@@ -1159,8 +1183,7 @@ things:</p>
 <li>The name of the dataset you want to mount.</li>
 <li>A name for the folder where the data will be
   accessible to your code during the job, we call this the "mount point". You
-  can give this folder (mount point) any name you want. Don't precede this name
-  with a forward slash <code class="codehilite">/</code>.</li>
+  can give this folder (mount point) any name you want.</li>
 </ol>
 <p>These two things are separated by a <code class="codehilite">:</code> with no spaces. Here's the syntax:</p>
 <div class="codehilite"><pre><span></span>floyd run --data &lt;data_set_name&gt;:&lt;mount_point&gt; …(rest of run command)
@@ -1169,23 +1192,26 @@ things:</p>
 <p>Let's go through a couple of examples to show how to mount one or more datasets to your job.</p>
 <h4 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
 <p>The command below will mount FloydHub's public
-<a href="https://www.floydhub.com/floydhub/datasets/udacity-gan">Udacity GAN</a>
+<a href="https://www.floydhub.com/floydhub/datasets/udacity-gan/1">Udacity GAN</a>
  dataset at <code class="codehilite">/my_data</code>
-<div class="codehilite"><pre><span></span>floyd run --data floydhub/datasets/udacity-gan:my_data &quot;python my_script.py&quot;
+<div class="codehilite"><pre><span></span>floyd run --data floydhub/datasets/udacity-gan/1:/my_data &quot;python my_script.py&quot;
 </pre></div></p>
 <p>A couple of things to note:</p>
 <ul>
 <li>There is no space between the name of the dataset
-    (<code class="codehilite">floydhub/datasets/udacity-gan</code>) and the mount point name (<code class="codehilite">my_data</code>).</li>
+    (<code class="codehilite">floydhub/datasets/udacity-gan/1</code>) and the mount point name (<code class="codehilite">/my_data</code>).</li>
 <li>A colon (<code class="codehilite">:</code>) is used to separate the name of the dataset and the
     mount point.</li>
-<li>The mount point name does not have have a preceding <code class="codehilite">/</code>, but your code
-    needs to add the preceding slash to locate the dataset during the job.
-    This means that if you specify <code class="codehilite">my_data</code> as the mount point, your code can
-    find your dataset at <code class="codehilite">/my_data</code>. If you specify <code class="codehilite">mnist_data</code> as the mount
-    point, your code needs to look in <code class="codehilite">/mnist_data</code> for your data.</li>
-<li>Nested mount points are not supported. This means a mount point like
-    <code class="codehilite">my_data/foo</code> will not work.</li>
+<li>Datasets are always mounted at the root directory (<code class="codehilite">/</code>). This means that if
+    you specify <code class="codehilite">/foo</code> as the mountpoint, your data will be mounted at <code class="codehilite">/foo</code>.
+    If you specify <code class="codehilite">foo</code> as the mount point, your data will still be mounted
+    at <code class="codehilite">/foo</code>. Preceding the mount point with a <code class="codehilite">/</code> is optional‒your data will
+    be mounted at the same location either way. You'll see us use both
+    variations in this guide.</li>
+<li>Nested mount points are not supported. This means mount points like
+    <code class="codehilite">my_data/foo</code> or <code class="codehilite">/home/me/data</code> will not work. If you need your data
+    available at a nested directory, check out the <a href="../symlink_mounted_data">Symlinking mounted
+    data</a> guide.</li>
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
