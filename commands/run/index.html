@@ -1331,12 +1331,12 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress 
+<p>This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress
 with <a href="../status">status</a> command. To view the logs from your code use <a href="../logs">logs</a> command.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="s2">&quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;</span>
 Syncing code ...
-RUN ID                  NAME                         
+RUN ID                  NAME
 ----------------------  -----------------------------
 dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project/7
 
@@ -1345,8 +1345,8 @@ $ floyd logs floydhub/tensorflow-project/7
 </pre></div>
 
 <h3 id="floyd_requirementstxt">floyd_requirements.txt<a class="headerlink" href="#floyd_requirementstxt" title="Permanent link">&para;</a></h3>
-<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="../../guides/environments">environments</a> for details). If your 
-code requires additional Python dependencies you can specify them in a <code class="codehilite">floyd_requirements.txt</code> file and place it at the root 
+<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="../../guides/environments">environments</a> for details). If your
+code requires additional Python dependencies you can specify them in a <code class="codehilite">floyd_requirements.txt</code> file and place it at the root
 directory of your project. These dependencies will be installed before running your code.</p>
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ cat floyd_requirements.txt
@@ -1356,8 +1356,8 @@ $ floyd run <span class="s2">&quot;python train_tf.py -lr 0.01 -output /output/m
 </pre></div>
 
 <h3 id="jupyter-notebook">Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Permanent link">&para;</a></h3>
-<p>Floyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the 
-current directory. Use <code class="codehilite">--mode jupyter</code> and you will be presented with a URL to view your Jupyter environment. You do not need 
+<p>Floyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the
+current directory. Use <code class="codehilite">--mode jupyter</code> and you will be presented with a URL to view your Jupyter environment. You do not need
 to specify a command in this mode. See <a href="../../guides/jupyter">jupyter</a> page for more details.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ floyd run --mode jupyter
@@ -1366,8 +1366,8 @@ Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGTo
 </pre></div>
 
 <h3 id="attaching-multiple-datasets">Attaching multiple datasets<a class="headerlink" href="#attaching-multiple-datasets" title="Permanent link">&para;</a></h3>
-<p>You can attach upto 5 datasets when you run a project using the run command. You can specify both 
-datasets you uploaded and output datasets of your previous runs. You can specify the mount point 
+<p>You can attach upto 5 datasets when you run a project using the run command. You can specify both
+datasets you uploaded and output datasets of your previous runs. You can specify the mount point
 also when you specify the data id to mount.</p>
 <h4 id="example_3">Example:<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p><div class="codehilite"><pre><span></span>$ floyd run --data floydhub/datasets/cifar/1:training --data floydhub/datasets/faces/21:testing <span class="s2">&quot;python script.py&quot;</span>
@@ -1377,7 +1377,7 @@ The above datasets will be mounted at <code class="codehilite">/training</code> 
 <p>Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
 Use <code class="codehilite">--mode serve</code> and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
 It runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.
-See <a href="../../guides/style_transfer/#serve-mode">serve</a> page for more details.</p>
+See <a href="../../examples/style_transfer/#serve-mode">serve</a> page for more details.</p>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ floyd run --mode serve
 ...
