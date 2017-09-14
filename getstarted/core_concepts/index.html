@@ -1294,19 +1294,20 @@ and how to customize your environment if the available environments don't meet
 your needs.</p>
 <h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
 <p>Output is anything from a job that you want to save for future use. The most
-common form of output are model checkpoints (the weights and biases of your
-model) that you developed during a job. You can save these checkpoints (or
-anything else you'd like to preserve) during a job, and have them to reference,
-download, and reuse in the future.</p>
-<p>Output is the way that you can link jobs together. You run a job to test an
+common form of output is model checkpoints (the weights and biases of your
+model) that you developed during a job. If you save these checkpoints (or
+anything else you'd like to preserve) during a job, you'll have them to
+reference, download, and reuse in the future.</p>
+<p>Output is the way that you can link jobs together: You run a job to test an
 idea you have. If it works, you may want to start where you left off and run
 another job. If going down that path leads to a dead end, you may want to go
 back to a previous output and start again from there. Knowing how to store
 output is key to optimizing your deep learning workflow.</p>
-<p>Saving and reusing output on FloydHub tends to feel foriegn to a lot of people
-who are new to FloydHub and are used to working on their own machines, but once
-you learn how to do it, it becomes very simple and is one of the most valuable
-parts of the FloydHub workflow.</p>
+<p><a href="../../guides/data/storing_output">Saving</a> and <a href="../../guides/reusing_output">reusing</a>
+output on FloydHub tends to feel foriegn to a lot of people who are new to
+FloydHub and are used to working on their own machines. But once you learn how
+to do it, it becomes very simple and is one of the most valuable parts of the
+FloydHub workflow.</p>
 <h3 id="key-concepts_1">Key concepts<a class="headerlink" href="#key-concepts_1" title="Permanent link">&para;</a></h3>
 <p>The main things you need to understand about output on FloydHub are:</p>
 <ol>
