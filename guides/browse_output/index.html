@@ -350,6 +350,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../stop_job/" title="Stop a Job Early" class="md-nav__link">
+      Stop a Job Early
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../jobs/tensorboard/" title="Enable Tensorboard" class="md-nav__link">
       Enable Tensorboard
     </a>
@@ -362,8 +374,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ssh/" title="SSH into a job" class="md-nav__link">
-      SSH into a job
+    <a href="../ssh/" title="SSH into a Job" class="md-nav__link">
+      SSH into a Job
     </a>
   </li>
 
@@ -542,8 +554,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../ssh/" title="SSH into a job" class="md-nav__link">
-      SSH into a job
+    <a href="../ssh/" title="SSH into a Job" class="md-nav__link">
+      SSH into a Job
     </a>
   </li>
 
@@ -1118,7 +1130,7 @@
 <p>On the job screen on floydhub.com:</p>
 <p><img alt="Download Output" src="../../img/browse_output_partial.jpg" /></p>
 <p>Or from the CLI:
-<div class="codehilite"><pre><span></span>$ floyd output &lt;username&gt;/&lt;project_name&gt;/&lt;run_number&gt;
+<div class="codehilite"><pre><span></span>$ floyd output &lt;username&gt;/projects/&lt;project_name&gt;/&lt;run_number&gt;
 </pre></div></p>
 </div>
 <p>After you've <a href="../data/storing_output">saved output</a> from a job, you can browse the
@@ -1132,8 +1144,10 @@ documentation</a>.</p>
 the job by using the "Browse" and "Download" icons found on the "Output" tab:</p>
 <p><img alt="Download Output" src="../../img/browse_output_full.jpg" /></p>
 <h2 id="from-the-cli">From the CLI<a class="headerlink" href="#from-the-cli" title="Permanent link">&para;</a></h2>
-<p>To open the browsing window from the CLI, use the <a href="../../commands/data"><code class="codehilite">floyd dataclone</code></a> command and pass it the path of the job's output:</p>
-<div class="codehilite"><pre><span></span>$ floyd data clone mckay/projects/my_proj/1/output
+<p>To open the browsing window from the CLI, use the
+<a href="../../commands/data"><code class="codehilite">floyd data clone</code></a> command and pass it the path of the
+job's output:</p>
+<div class="codehilite"><pre><span></span>$ floyd output mckay/projects/my_proj/1
 Opening output directory in your browser ...
 </pre></div>
 
