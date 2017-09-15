@@ -317,7 +317,7 @@
         }, 
         {
             "location": "/guides/ssh/", 
-            "text": "Quick Look\n\n\n$ floyd run --mode jupyter\n\n\n\n\n\n\n\n\nYou can start a bash session into your job's environment by running your job in\nJupyter Notebook mode:\n\n\n$ floyd run --mode jupyter\nCreating project run. Total upload size: \n183\n.0B\nSyncing code ...\n\n[================================]\n \n916\n/916 - \n00\n:00:00\n\nJOB NAME\n--------------------\nmckay/projects/ssh/1\n\nSetting up your instance and waiting \nfor\n Jupyter notebook to become available\n\nPath to jupyter notebook: https://floydhub.com/notebooks/YXau92xMFUshUbMdKqKVVX\n\n\n\n\nWhen you visit your running Jupyter Notebook in the browser, click the \nNew\n\nbutton in the top right corner of the screen and select the \nTerminal\n option\nas shown below:\n\n\n\n\nThat button will launch a terminal session in your running instance with root\naccess:\n\n\n\nCurrently, FloydHub does not offer true SSH access into instances, but the\nmethod described above is sufficient for what most users want to use SSH.", 
+            "text": "Quick Look\n\n\n$ floyd run --mode jupyter\n\n\n\n\n\n\n\n\nYou can start a bash session into your job's environment by running your job in\nJupyter Notebook mode:\n\n\n$ floyd run --mode jupyter\nCreating project run. Total upload size: \n183\n.0B\nSyncing code ...\n\n[================================]\n \n916\n/916 - \n00\n:00:00\n\nJOB NAME\n--------------------\nmckay/projects/ssh/1\n\nSetting up your instance and waiting \nfor\n Jupyter notebook to become available\n\nPath to jupyter notebook: https://floydhub.com/notebooks/YXau92xMFUshUbMdKqKVVX\n\n\n\n\nWhen you visit your running Jupyter Notebook in the browser, click the \nNew\n\nbutton in the top right corner of the screen and select the \nTerminal\n option\nas shown below:\n\n\n\n\nThat button will launch a terminal session in your running instance with root\naccess:\n\n\n\nCurrently, FloydHub does not offer true SSH access into instances, but the\nmethod described above is sufficient for what most users request SSH for.", 
             "title": "SSH into a job"
         }, 
         {
@@ -652,7 +652,7 @@
         }, 
         {
             "location": "/guides/ssh/", 
-            "text": "Quick Look\n\n\n$ floyd run --mode jupyter\n\n\n\n\n\n\n\n\nYou can start a bash session into your job's environment by running your job in\nJupyter Notebook mode:\n\n\n$ floyd run --mode jupyter\nCreating project run. Total upload size: \n183\n.0B\nSyncing code ...\n\n[================================]\n \n916\n/916 - \n00\n:00:00\n\nJOB NAME\n--------------------\nmckay/projects/ssh/1\n\nSetting up your instance and waiting \nfor\n Jupyter notebook to become available\n\nPath to jupyter notebook: https://floydhub.com/notebooks/YXau92xMFUshUbMdKqKVVX\n\n\n\n\nWhen you visit your running Jupyter Notebook in the browser, click the \nNew\n\nbutton in the top right corner of the screen and select the \nTerminal\n option\nas shown below:\n\n\n\n\nThat button will launch a terminal session in your running instance with root\naccess:\n\n\n\nCurrently, FloydHub does not offer true SSH access into instances, but the\nmethod described above is sufficient for what most users want to use SSH.", 
+            "text": "Quick Look\n\n\n$ floyd run --mode jupyter\n\n\n\n\n\n\n\n\nYou can start a bash session into your job's environment by running your job in\nJupyter Notebook mode:\n\n\n$ floyd run --mode jupyter\nCreating project run. Total upload size: \n183\n.0B\nSyncing code ...\n\n[================================]\n \n916\n/916 - \n00\n:00:00\n\nJOB NAME\n--------------------\nmckay/projects/ssh/1\n\nSetting up your instance and waiting \nfor\n Jupyter notebook to become available\n\nPath to jupyter notebook: https://floydhub.com/notebooks/YXau92xMFUshUbMdKqKVVX\n\n\n\n\nWhen you visit your running Jupyter Notebook in the browser, click the \nNew\n\nbutton in the top right corner of the screen and select the \nTerminal\n option\nas shown below:\n\n\n\n\nThat button will launch a terminal session in your running instance with root\naccess:\n\n\n\nCurrently, FloydHub does not offer true SSH access into instances, but the\nmethod described above is sufficient for what most users request SSH for.", 
             "title": "SSH into a job"
         }, 
         {
@@ -699,6 +699,21 @@
             "location": "/guides/delete_output/", 
             "text": "It is not possible to delete just the output of a job. You will have to \ndelete the job itself\n.", 
             "title": "Delete output"
+        }, 
+        {
+            "location": "/guides/download_output/", 
+            "text": "Quick Look\n\n\nOn the job screen on floydhub.com:\n\n\n\n\nOr from the CLI:\n\n$ floyd output username/project_name/run_number\n\n\n\n\n\nAfter you've \nsaved output\n from a job, you can browse and\ndownload the output of the job on floydhub.com.\n\n\nFrom floydhub.com\n\n\nFrom the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:\n\n\n\n\nFrom the CLI\n\n\nTo open the browsing window from the CLI, use the \nfloydoutput\n command:\n\n\n$ floyd output mckay/projects/my_proj/1\nOpening output directory in your browser ...", 
+            "title": "Browse and Download saved output"
+        }, 
+        {
+            "location": "/guides/download_output/#from-floydhubcom", 
+            "text": "From the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:", 
+            "title": "From floydhub.com"
+        }, 
+        {
+            "location": "/guides/download_output/#from-the-cli", 
+            "text": "To open the browsing window from the CLI, use the  floydoutput  command:  $ floyd output mckay/projects/my_proj/1\nOpening output directory in your browser ...", 
+            "title": "From the CLI"
         }, 
         {
             "location": "/guides/reusing_output/", 
