@@ -702,8 +702,8 @@
         }, 
         {
             "location": "/guides/download_output/", 
-            "text": "Quick Look\n\n\nOn the job screen on floydhub.com:\n\n\n\n\nOr from the CLI:\n\n$ floyd output username/project_name/run_number\n\n\n\n\n\nAfter you've \nsaved output\n from a job, you can browse and\ndownload the output of the job on floydhub.com.\n\n\nFrom floydhub.com\n\n\nFrom the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:\n\n\n\n\nFrom the CLI\n\n\nTo open the browsing window from the CLI, use the \nfloydoutput\n command:\n\n\n$ floyd output mckay/projects/my_proj/1\nOpening output directory in your browser ...", 
-            "title": "Browse and Download Saved Output"
+            "text": "Quick Look\n\n\nOn the job screen on floydhub.com:\n\n\n\n\nOr from the CLI:\n\n$ floyd data clone \nusername\n/\nproject_name\n/\nrun_number\n/output\n\n\n\n\n\nAfter you've \nsaved output\n from a job, you can download\nthe output of the job on floydhub.com or from the CLI.\n\n\nTo learn how to re-use output in a new job, see \nthis\ndocumentation\n.\n\n\nFrom floydhub.com\n\n\nFrom the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:\n\n\n\n\nFrom the CLI\n\n\nTo open the browsing window from the CLI, use the \nfloyd dataclone\n command and pass it the path of the job's output:\n\n\n$ floyd data clone mckay/projects/my_proj/1/output\nOpening output directory in your browser ...\n\n\n\n\nThe path of the output is \nyour_username\n/projects/\nproject_name\n/\nrun_number\n/output\n.", 
+            "title": "Download Saved Output"
         }, 
         {
             "location": "/guides/download_output/#from-floydhubcom", 
@@ -712,13 +712,28 @@
         }, 
         {
             "location": "/guides/download_output/#from-the-cli", 
-            "text": "To open the browsing window from the CLI, use the  floydoutput  command:  $ floyd output mckay/projects/my_proj/1\nOpening output directory in your browser ...", 
+            "text": "To open the browsing window from the CLI, use the  floyd dataclone  command and pass it the path of the job's output:  $ floyd data clone mckay/projects/my_proj/1/output\nOpening output directory in your browser ...  The path of the output is  your_username /projects/ project_name / run_number /output .", 
+            "title": "From the CLI"
+        }, 
+        {
+            "location": "/guides/browse_output/", 
+            "text": "Quick Look\n\n\nOn the job screen on floydhub.com:\n\n\n\n\nOr from the CLI:\n\n$ floyd output \nusername\n/\nproject_name\n/\nrun_number\n\n\n\n\n\n\nAfter you've \nsaved output\n from a job, you can browse the\noutput of the job on floydhub.com. Using the CLI, you can open to the job's\nin-browser data-browsing page.\n\n\nFor downloading output, see \nthis documentation\n.\n\n\nTo learn how to re-use output in a new job, see \nthis\ndocumentation\n.\n\n\nFrom floydhub.com\n\n\nFrom the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:\n\n\n\n\nFrom the CLI\n\n\nTo open the browsing window from the CLI, use the \nfloyd dataclone\n command and pass it the path of the job's output:\n\n\n$ floyd data clone mckay/projects/my_proj/1/output\nOpening output directory in your browser ...\n\n\n\n\nThe path of the output is \nyour_username\n/projects/\nproject_name\n/\nrun_number\n/output\n.", 
+            "title": "Browse Saved Output"
+        }, 
+        {
+            "location": "/guides/browse_output/#from-floydhubcom", 
+            "text": "From the job's page on floydhub.com, you can browse and download the output of\nthe job by using the \"Browse\" and \"Download\" icons found on the \"Output\" tab:", 
+            "title": "From floydhub.com"
+        }, 
+        {
+            "location": "/guides/browse_output/#from-the-cli", 
+            "text": "To open the browsing window from the CLI, use the  floyd dataclone  command and pass it the path of the job's output:  $ floyd data clone mckay/projects/my_proj/1/output\nOpening output directory in your browser ...  The path of the output is  your_username /projects/ project_name / run_number /output .", 
             "title": "From the CLI"
         }, 
         {
             "location": "/guides/reusing_output/", 
             "text": "You can link jobs by mounting the output of one job as the input of a new job.\nThis allows you to iterate on the ouput of a past job. Output is mounted to a\njob in the same way data is. To learn more about mounting data, see \nthis\nguide\n.\n\n\nYou can refer to the output of a job by its name with \n/output\n appended to it.\nFor example: \nfloydhub/projects/handwriting-recognition/12/output\n refers to\nthe output of the job \nfloydhub/projects/handwriting-recognition/12\n\n\nUse the \n--data\n flag in the \nfloyd run\n command, mount past output to a job,\njust as you would to mount a dataset. For example:\n\n\n$ floyd run \n\\\n\n  --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data \n\\\n\n  \npython train.py\n\n\n\n\n\nThis will make the output of \nfloydhub/projects/handwriting-recognition/12\n\navailable at \n/filtered_training_data\n for the new job to use.\n\n\nNote: You need to have access to a job to be able to mount its output.", 
-            "title": "Using Previous Outputs in a New Job"
+            "title": "Using Previous Output in a New Job"
         }, 
         {
             "location": "/guides/basics/install/", 

@@ -20,7 +20,7 @@
     
     
       
-        <title>Browse and Download Saved Output - FloydHub</title>
+        <title>Download Saved Output - FloydHub</title>
       
     
     
@@ -90,7 +90,7 @@
                 </span>
               
             
-            Browse and Download Saved Output
+            Download Saved Output
           
         </span>
       </div>
@@ -611,11 +611,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Browse and Download Saved Output
+        Download Saved Output
       </label>
     
-    <a href="./" title="Browse and Download Saved Output" class="md-nav__link md-nav__link--active">
-      Browse and Download Saved Output
+    <a href="./" title="Download Saved Output" class="md-nav__link md-nav__link--active">
+      Download Saved Output
     </a>
     
       
@@ -655,8 +655,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../reusing_output/" title="Using Previous Outputs in a New Job" class="md-nav__link">
-      Using Previous Outputs in a New Job
+    <a href="../browse_output/" title="Browse Saved Output" class="md-nav__link">
+      Browse Saved Output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../reusing_output/" title="Using Previous Output in a New Job" class="md-nav__link">
+      Using Previous Output in a New Job
     </a>
   </li>
 
@@ -1099,27 +1111,31 @@
                   <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/download_output.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Browse and Download Saved Output</h1>
+                  <h1>Download Saved Output</h1>
                 
                 <div class="admonition important">
 <p class="admonition-title">Quick Look</p>
 <p>On the job screen on floydhub.com:</p>
-<p><img alt="Download Output" src="../../img/download_output_bar_only.jpg" /></p>
+<p><img alt="Download Output" src="../../img/download_output_partial.jpg" /></p>
 <p>Or from the CLI:
-<div class="codehilite"><pre><span></span>$ floyd output username/project_name/run_number
+<div class="codehilite"><pre><span></span>$ floyd data clone &lt;username&gt;/&lt;project_name&gt;/&lt;run_number&gt;/output
 </pre></div></p>
 </div>
-<p>After you've <a href="../data/storing_output">saved output</a> from a job, you can browse and
-download the output of the job on floydhub.com.</p>
+<p>After you've <a href="../data/storing_output">saved output</a> from a job, you can download
+the output of the job on floydhub.com or from the CLI.</p>
+<p>To learn how to re-use output in a new job, see <a href="../reusing_output">this
+documentation</a>.</p>
 <h2 id="from-floydhubcom">From floydhub.com<a class="headerlink" href="#from-floydhubcom" title="Permanent link">&para;</a></h2>
 <p>From the job's page on floydhub.com, you can browse and download the output of
 the job by using the "Browse" and "Download" icons found on the "Output" tab:</p>
 <p><img alt="Download Output" src="../../img/download_output_full.jpg" /></p>
 <h2 id="from-the-cli">From the CLI<a class="headerlink" href="#from-the-cli" title="Permanent link">&para;</a></h2>
-<p>To open the browsing window from the CLI, use the <a href="../../commands/output"><code class="codehilite">floydoutput</code></a> command:</p>
-<div class="codehilite"><pre><span></span>$ floyd output mckay/projects/my_proj/1
+<p>To open the browsing window from the CLI, use the <a href="../../commands/data"><code class="codehilite">floyd dataclone</code></a> command and pass it the path of the job's output:</p>
+<div class="codehilite"><pre><span></span>$ floyd data clone mckay/projects/my_proj/1/output
 Opening output directory in your browser ...
 </pre></div>
+
+<p>The path of the output is <code class="codehilite">&lt;your_username&gt;/projects/&lt;project_name&gt;/&lt;run_number&gt;/output</code>.</p>
                 
                   
                 
@@ -1153,13 +1169,13 @@ Opening output directory in your browser ...
           </a>
         
         
-          <a href="../reusing_output/" title="Using Previous Outputs in a New Job" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../browse_output/" title="Browse Saved Output" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Using Previous Outputs in a New Job
+                Browse Saved Output
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
