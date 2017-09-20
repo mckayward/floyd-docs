@@ -375,20 +375,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#options" title="[OPTIONS]:" class="md-nav__link">
-    [OPTIONS]:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command" title="[COMMAND]" class="md-nav__link">
-    [COMMAND]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parts-of-the-floyd-run-command" title="Parts of the floyd run Command" class="md-nav__link">
     Parts of the floyd run Command
   </a>
@@ -397,14 +383,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options_1" title="[OPTIONS]" class="md-nav__link">
+  <a href="#options" title="[OPTIONS]" class="md-nav__link">
     [OPTIONS]
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#command_1" title="[COMMAND]" class="md-nav__link">
+  <a href="#command" title="[COMMAND]" class="md-nav__link">
     [COMMAND]
   </a>
   
@@ -416,7 +402,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options_2" title="[OPTIONS]" class="md-nav__link">
+  <a href="#options_1" title="[OPTIONS]" class="md-nav__link">
     [OPTIONS]
   </a>
   
@@ -511,7 +497,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command_2" title="[COMMAND]" class="md-nav__link">
+  <a href="#command_1" title="[COMMAND]" class="md-nav__link">
     [COMMAND]
   </a>
   
@@ -1286,20 +1272,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#options" title="[OPTIONS]:" class="md-nav__link">
-    [OPTIONS]:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command" title="[COMMAND]" class="md-nav__link">
-    [COMMAND]
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parts-of-the-floyd-run-command" title="Parts of the floyd run Command" class="md-nav__link">
     Parts of the floyd run Command
   </a>
@@ -1308,14 +1280,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#options_1" title="[OPTIONS]" class="md-nav__link">
+  <a href="#options" title="[OPTIONS]" class="md-nav__link">
     [OPTIONS]
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#command_1" title="[COMMAND]" class="md-nav__link">
+  <a href="#command" title="[COMMAND]" class="md-nav__link">
     [COMMAND]
   </a>
   
@@ -1327,7 +1299,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options_2" title="[OPTIONS]" class="md-nav__link">
+  <a href="#options_1" title="[OPTIONS]" class="md-nav__link">
     [OPTIONS]
   </a>
   
@@ -1422,7 +1394,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#command_2" title="[COMMAND]" class="md-nav__link">
+  <a href="#command_1" title="[COMMAND]" class="md-nav__link">
     [COMMAND]
   </a>
   
@@ -1457,16 +1429,16 @@
                 <div class="admonition important">
 <p class="admonition-title">Quick Look</p>
 <p><code class="codehilite">floyd run [OPTIONS] [COMMAND]</code></p>
-<h5 id="options"><a href="#options_2">[OPTIONS]</a>:<a class="headerlink" href="#options" title="Permanent link">&para;</a></h5>
+<p><strong><a href="#options_1">[OPTIONS]</a>:</strong></p>
 <ul>
 <li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu --gpu --cpu+ --gpu+</code></li>
-<li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data</code></li>
+<li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data &lt;name_of_datasource&gt;:&lt;mount_point_on_server</code></li>
 <li><a href="#mode">Mode</a>: <code class="codehilite">--mode &lt;mode_name&gt;</code></li>
 <li><a href="#environment">Environment</a>: <code class="codehilite">--env &lt;environment_name</code></li>
 <li><a href="#message">Message</a> <code class="codehilite">--message</code> or <code class="codehilite">-m</code></li>
 <li><a href="#tensorboard">Tensorboard</a>: <code class="codehilite">--tensorboard</code></li>
 </ul>
-<h5 id="command"><a href="#command_2">[COMMAND]</a><a class="headerlink" href="#command" title="Permanent link">&para;</a></h5>
+<p><strong><a href="#command_1">[COMMAND]</a></strong></p>
 </div>
 <p>Running jobs is the core action in the FloydHub workflow. A job pulls together
 your code and dataset(s), sends them to a deep-learning server configured with
@@ -1478,7 +1450,7 @@ ins-and-outs of running jobs on FloydHub using the <code class="codehilite">floy
 you, as well as how to use the <code class="codehilite">[COMMAND]</code> properly. Use the links below as a
 quick reference.</p>
 <h2 id="parts-of-the-floyd-run-command">Parts of the <code class="codehilite">floyd run</code> Command<a class="headerlink" href="#parts-of-the-floyd-run-command" title="Permanent link">&para;</a></h2>
-<h3 id="options_1"><a href="#options_2">[OPTIONS]</a><a class="headerlink" href="#options_1" title="Permanent link">&para;</a></h3>
+<h3 id="options"><a href="#options_1">[OPTIONS]</a><a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu --gpu --cpu+ --gpu+</code></li>
 <li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data</code></li>
@@ -1487,8 +1459,8 @@ quick reference.</p>
 <li><a href="#message">Message</a> <code class="codehilite">--message -m</code></li>
 <li><a href="#tensorboard">Tensorboard</a>: <code class="codehilite">--tensorboard</code></li>
 </ul>
-<h3 id="command_1"><a href="#command_2">[COMMAND]</a><a class="headerlink" href="#command_1" title="Permanent link">&para;</a></h3>
-<h2 id="options_2">[OPTIONS]<a class="headerlink" href="#options_2" title="Permanent link">&para;</a></h2>
+<h3 id="command"><a href="#command_1">[COMMAND]</a><a class="headerlink" href="#command" title="Permanent link">&para;</a></h3>
+<h2 id="options_1">[OPTIONS]<a class="headerlink" href="#options_1" title="Permanent link">&para;</a></h2>
 <h3 id="instance-type">Instance Type<a class="headerlink" href="#instance-type" title="Permanent link">&para;</a></h3>
 <p>To specify the instance type means to choose what kind of FloydHub instance
 your job will run on. Think of this as a hardware choice rather than a software
@@ -1560,20 +1532,22 @@ specify the <code class="codehilite">--data</code> flag as detailed below:</p>
 <p>This is the default mode so there is no need to specify <code class="codehilite">--mode job</code> when
 running <code class="codehilite">floyd run</code>. You can think of this mode as "regular mode". When you run
 your job in this mode, your code is sent up to a FloydHub deep-learning server
-and the <a href="#command">command</a> portion of your <code class="codehilite">floyd run</code> command is executed.</p>
+and the <a href="#command">[COMMAND]</a> portion of <code class="codehilite">floyd run</code> executed.</p>
 <h4 id="-mode-jupyter"><code class="codehilite">--mode jupyter</code><a class="headerlink" href="#-mode-jupyter" title="Permanent link">&para;</a></h4>
 <p>This is Jupyter Notebook mode. When you specify <code class="codehilite">--mode jupyter</code>, your code is
 uploaded to a FloydHub deep-learning server, and a Jupyter Notebook session is
-started in the directory containing your code. FloyHub serves this Jupyter Notebook session for you at a URL that FloydHub generates and will give to you.</p>
-<p>Use this mode when:</p>
+started in the directory containing your code.</p>
+<p>FloyHub serves this Jupyter Notebook session for you. Your Jupyter Notebook
+session will be automatically opened in a web browser when it becomes
+available. If you don't want your browser to automatcially open, pass the <code class="codehilite">--no-open</code> flag to <code class="codehilite">floyd run</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Use This Mode When:</p>
 <ol>
-<li>You want to work with a Jupyter Notebook.</li>
-<li>You want to open an interactive shell on the FloydHub server where your code
+<li>You want to work with a <strong>Jupyter Notebook</strong>.</li>
+<li>You want to open an <strong>interactive shell</strong> on the FloydHub server where your code
    is running. For details on how to do that, see <a href="../../guides/ssh">this article</a></li>
 </ol>
-<p>If you want to have the Jupyter Notebook session automatically opened in a
-browser when the URL becomes available, add the <code class="codehilite">--open</code> flag to your call to
-<code class="codehilite">floyd run</code>.</p>
+</div>
 <h4 id="-mode-serve"><code class="codehilite">--mode serve</code><a class="headerlink" href="#-mode-serve" title="Permanent link">&para;</a></h4>
 <p>This mode is for serving your deep learning models as an API endpoint. To use
 serve mode, you'll need to make sure your project's code meets a few
@@ -1593,7 +1567,7 @@ use.</p>
 <p>Specifying the environment means choosing what major deep-learning software
 packages you want available on the server that runs your code. This is not a
 specification between a CPU server and a GPU server (that's the
-<a href="#instance-type">Instance Type</a> <code class="codehilite">OPTION</code> of the <code class="codehilite">floyd run</code> command).</p>
+<a href="#instance-type">Instance Type</a> <code class="codehilite">OPTION</code> of <code class="codehilite">floyd run</code>).</p>
 <p>FloydHub offers servers with many different deep-learning software packages
 pre-installed.  You can find a list of all the available environments
 <a href="../../guides/environments">here</a>.</p>
@@ -1625,12 +1599,13 @@ To view logs enter:
 <img alt="Job Message on Project Detail Page" src="../../img/project_detail_job_message.jpg" /></p>
 <h3 id="tensorboard">Tensorboard<a class="headerlink" href="#tensorboard" title="Permanent link">&para;</a></h3>
 <p>The <code class="codehilite">--tensorboard</code> flag allows you to enable Tensorboard on your job. For more details, see <a href="../../guides/jobs/tensorboard">this article</a>.</p>
-<h2 id="command_2">[COMMAND]<a class="headerlink" href="#command_2" title="Permanent link">&para;</a></h2>
-<p>The <code class="codehilite">[COMMAND]</code> portion of <code class="codehilite">floyd run</code> is the command that will be run on the
-server when your job begins. It will be run in the directory on the server that holds your code. To decide what to put in the <code class="codehilite">[COMMAND]</code>, answer
-this question:</p>
+<h2 id="command_1">[COMMAND]<a class="headerlink" href="#command_1" title="Permanent link">&para;</a></h2>
+<p>The <code class="codehilite">[COMMAND]</code> portion of <code class="codehilite">floyd run</code> is the command that will be executed on
+the server when your job begins. It will be run in the directory on the server
+that holds your code. To decide what to put in the <code class="codehilite">[COMMAND]</code>, answer this
+question:</p>
 <blockquote>
-<p>What command would I run to kick off my code locally?</p>
+<p>What command would I execute to kick off my code locally?</p>
 </blockquote>
 <p>The answer to that question is what you should put into the <code class="codehilite">[COMMAND]</code> portion
 of <code class="codehilite">floyd run</code>.</p>
