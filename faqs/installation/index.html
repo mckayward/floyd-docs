@@ -14,7 +14,7 @@
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
     
@@ -242,8 +242,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+    <a href="../../getstarted/quick_start_new/" title="Quick Start" class="md-nav__link">
       Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getstarted/quick_start/" title="Quick Start Old" class="md-nav__link">
+      Quick Start Old
     </a>
   </li>
 
@@ -338,8 +350,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/delete_job/" title="Delete a Job" class="md-nav__link">
-      Delete a Job
+    <a href="../../guides/run_a_job/" title="Run a Job" class="md-nav__link">
+      Run a Job
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/stop_job/" title="Stop a Job" class="md-nav__link">
+      Stop a Job
     </a>
   </li>
 
@@ -352,6 +376,18 @@
   <li class="md-nav__item">
     <a href="../../guides/jobs/tensorboard/" title="Enable Tensorboard" class="md-nav__link">
       Enable Tensorboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guides/delete_job/" title="Delete a Job" class="md-nav__link">
+      Delete a Job
     </a>
   </li>
 
@@ -932,6 +968,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../examples/dcgan/" title="Deep Convolutional Generative Adversarial Networks" class="md-nav__link">
+      Deep Convolutional Generative Adversarial Networks
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -985,13 +1033,6 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-virtualenv-to-install-floyd-cli" title="Using virtualenv to install floyd-cli" class="md-nav__link">
-    Using virtualenv to install floyd-cli
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#using-conda-to-install-floyd-cli" title="Using conda to install floyd-cli" class="md-nav__link">
@@ -1090,6 +1131,27 @@
   </li>
 
     
+      
+      
+      
+
+
+
+    
+      
+      
+      
+
+
+
+    
+      
+      
+      
+
+
+
+    
   </ul>
 </nav>
                   </div>
@@ -1107,13 +1169,6 @@
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#using-virtualenv-to-install-floyd-cli" title="Using virtualenv to install floyd-cli" class="md-nav__link">
-    Using virtualenv to install floyd-cli
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#using-conda-to-install-floyd-cli" title="Using conda to install floyd-cli" class="md-nav__link">
@@ -1169,24 +1224,7 @@
                 
                   <h1>Installation</h1>
                 
-                <h3 id="using-virtualenv-to-install-floyd-cli">Using virtualenv to install floyd-cli<a class="headerlink" href="#using-virtualenv-to-install-floyd-cli" title="Permanent link">&para;</a></h3>
-<p>We highly recommend using <a href="https://virtualenv.pypa.io/en/stable/userguide/">virtualenv</a> for installing and using <code class="codehilite">floyd-cli</code>. This helps avoid any library version conflicts and results in a smoother installation process.</p>
-<div class="codehilite"><pre><span></span>sudo pip install virtualenv
-</pre></div>
-
-<p>To create a virtualenv, you need to pass a path to store the installed packages.</p>
-<div class="codehilite"><pre><span></span>virtualenv ~/floyd
-</pre></div>
-
-<p>You can now activate and start using the virtualenv by running:
-<div class="codehilite"><pre><span></span><span class="nb">source</span> ~/floyd/bin/activate
-</pre></div></p>
-<p>To install floyd-cli in this virtualenv:</p>
-<div class="codehilite"><pre><span></span>pip install -U floyd-cli
-</pre></div>
-
-<p>You are now ready to use the <a href="http://docs.floydhub.com/commands/">floyd commands</a>. Note: You need to activate your virtualenv using the <code class="codehilite">source</code> command above each time you open a new terminal and want to use <code class="codehilite">floyd-cli</code> in it.</p>
-<h3 id="using-conda-to-install-floyd-cli">Using conda to install floyd-cli<a class="headerlink" href="#using-conda-to-install-floyd-cli" title="Permanent link">&para;</a></h3>
+                <h3 id="using-conda-to-install-floyd-cli">Using conda to install floyd-cli<a class="headerlink" href="#using-conda-to-install-floyd-cli" title="Permanent link">&para;</a></h3>
 <p>If you are using Anaconda Python, you can also use <code class="codehilite">conda</code> to install <code class="codehilite">floyd-cli</code>, instead of <code class="codehilite">virtualenv</code>.</p>
 <div class="codehilite"><pre><span></span>conda create -n &lt;insert-your-env-name-here&gt;
 <span class="nb">source</span> activate &lt;insert-your-env-name-here&gt;
@@ -1255,7 +1293,7 @@ Python.h: No such file or directory
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../examples/deep_corrector/" title="Deep Text Corrector" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../examples/dcgan/" title="Deep Convolutional Generative Adversarial Networks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1264,7 +1302,7 @@ Python.h: No such file or directory
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deep Text Corrector
+                Deep Convolutional Generative Adversarial Networks
               </span>
             </div>
           </a>

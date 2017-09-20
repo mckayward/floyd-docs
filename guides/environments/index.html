@@ -14,7 +14,7 @@
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
     
@@ -242,8 +242,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+    <a href="../../getstarted/quick_start_new/" title="Quick Start" class="md-nav__link">
       Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getstarted/quick_start/" title="Quick Start Old" class="md-nav__link">
+      Quick Start Old
     </a>
   </li>
 
@@ -338,8 +350,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../delete_job/" title="Delete a Job" class="md-nav__link">
-      Delete a Job
+    <a href="../run_a_job/" title="Run a Job" class="md-nav__link">
+      Run a Job
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stop_job/" title="Stop a Job" class="md-nav__link">
+      Stop a Job
     </a>
   </li>
 
@@ -352,6 +376,18 @@
   <li class="md-nav__item">
     <a href="../jobs/tensorboard/" title="Enable Tensorboard" class="md-nav__link">
       Enable Tensorboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../delete_job/" title="Delete a Job" class="md-nav__link">
+      Delete a Job
     </a>
   </li>
 
@@ -970,6 +1006,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../examples/dcgan/" title="Deep Convolutional Generative Adversarial Networks" class="md-nav__link">
+      Deep Convolutional Generative Adversarial Networks
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1059,6 +1107,27 @@
   </li>
 
     
+      
+      
+      
+
+
+
+    
+      
+      
+      
+
+
+
+    
+      
+      
+      
+
+
+
+    
   </ul>
 </nav>
                   </div>
@@ -1122,7 +1191,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Keras</td>
 <td>keras</td>
-<td>Tensorflow 1.1.0 + keras 2.0.4 on Python3.</td>
+<td>Tensorflow 1.1.0 + keras 2.0.4 on Python3.5.</td>
 <td></td>
 </tr>
 <tr>
@@ -1132,9 +1201,21 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <td></td>
 </tr>
 <tr>
+<td>Tensorflow 1.3</td>
+<td>tensorflow-1.3</td>
+<td>Tensorflow 1.3.0 + Keras 2.0.4 on Python3.6.</td>
+<td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
+</tr>
+<tr>
+<td></td>
+<td>tensorflow-1.3:py2</td>
+<td>Tensorflow 1.3.0 + Keras 2.0.4 on Python2.</td>
+<td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
+</tr>
+<tr>
 <td>Tensorflow 1.2</td>
 <td>tensorflow-1.2</td>
-<td>Tensorflow 1.2.0 + Keras 2.0.4 on Python3.</td>
+<td>Tensorflow 1.2.0 + Keras 2.0.4 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
 </tr>
 <tr>
@@ -1146,7 +1227,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Tensorflow 1.1</td>
 <td>tensorflow</td>
-<td>Tensorflow 1.1.0 + Keras 2.0.4 on Python3.</td>
+<td>Tensorflow 1.1.0 + Keras 2.0.4 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
 </tr>
 <tr>
@@ -1158,7 +1239,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Tensorflow 1.0</td>
 <td>tensorflow-1.0</td>
-<td>Tensorflow 1.0.0 + Keras 1.2.2 on Python3.</td>
+<td>Tensorflow 1.0.0 + Keras 1.2.2 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
 </tr>
 <tr>
@@ -1170,7 +1251,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Tensorflow 0.12</td>
 <td>tensorflow-0.12</td>
-<td>Tensorflow 0.12.1 + Keras 1.2.2 on Python3.</td>
+<td>Tensorflow 0.12.1 + Keras 1.2.2 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow</a></td>
 </tr>
 <tr>
@@ -1206,7 +1287,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Theano 0.8</td>
 <td>theano-0.8</td>
-<td>Theano rel-0.8.2 + Keras 1.2.2 on Python3.</td>
+<td>Theano rel-0.8.2 + Keras 1.2.2 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/theano/">floydhub/theano</a></td>
 </tr>
 <tr>
@@ -1218,7 +1299,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Theano 0.9</td>
 <td>theano-0.9</td>
-<td>Theano rel-0.8.2 + Keras 2.0.3 on Python3.</td>
+<td>Theano rel-0.8.2 + Keras 2.0.3 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/theano/">floydhub/theano</a></td>
 </tr>
 <tr>
@@ -1230,7 +1311,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 <tr>
 <td>Caffe</td>
 <td>caffe</td>
-<td>Caffe rc4 on Python3.</td>
+<td>Caffe rc4 on Python3.5.</td>
 <td><a href="https://hub.docker.com/r/floydhub/caffe/">floydhub/caffe</a></td>
 </tr>
 <tr>
