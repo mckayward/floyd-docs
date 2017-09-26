@@ -1419,11 +1419,11 @@
 <p><code class="codehilite">floyd run [OPTIONS] [COMMAND]</code></p>
 <p><strong><a href="#options_1">[OPTIONS]</a>:</strong></p>
 <ul>
-<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu --gpu --cpu+ --gpu+</code></li>
+<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu+</code> <strong>or</strong> <code class="codehilite">--gpu+</code></li>
 <li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data &lt;name_of_datasource&gt;:&lt;mount_point_on_server&gt;</code></li>
 <li><a href="#mode">Mode</a>: <code class="codehilite">--mode &lt;mode_name&gt;</code></li>
-<li><a href="#environment">Environment</a>: <code class="codehilite">--env &lt;environment_name</code></li>
-<li><a href="#message">Message</a> <code class="codehilite">--message</code> or <code class="codehilite">-m</code></li>
+<li><a href="#environment">Environment</a>: <code class="codehilite">--env &lt;environment_name&gt;</code></li>
+<li><a href="#message">Message</a> <code class="codehilite">--message</code> <strong>or</strong> <code class="codehilite">-m</code></li>
 <li><a href="#tensorboard">Tensorboard</a>: <code class="codehilite">--tensorboard</code></li>
 </ul>
 <p><strong><a href="#command_1">[COMMAND]</a></strong></p>
@@ -1440,11 +1440,11 @@ quick reference.</p>
 <h2 id="parts-of-the-floyd-run-command">Parts of the <code class="codehilite">floyd run</code> Command<a class="headerlink" href="#parts-of-the-floyd-run-command" title="Permanent link">&para;</a></h2>
 <h3 id="options"><a href="#options_1">[OPTIONS]</a><a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu --gpu --cpu+ --gpu+</code></li>
+<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu+</code> <strong>or</strong> <code class="codehilite">--gpu+</code></li>
 <li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data</code></li>
 <li><a href="#mode">Mode</a>: <code class="codehilite">--mode</code></li>
 <li><a href="#environment">Environment</a>: <code class="codehilite">--env</code></li>
-<li><a href="#message">Message</a> <code class="codehilite">--message -m</code></li>
+<li><a href="#message">Message</a> <code class="codehilite">--message</code> <strong>or</strong> <code class="codehilite">-m</code></li>
 <li><a href="#tensorboard">Tensorboard</a>: <code class="codehilite">--tensorboard</code></li>
 </ul>
 <h3 id="command"><a href="#command_1">[COMMAND]</a><a class="headerlink" href="#command" title="Permanent link">&para;</a></h3>
@@ -1498,7 +1498,9 @@ detailed below:</p>
 </ul>
 </div>
 <h4 id="what-is-the-difference-between-a-preemptible-and-a-dedicated-instance">What is the difference between a preemptible and a dedicated instance?<a class="headerlink" href="#what-is-the-difference-between-a-preemptible-and-a-dedicated-instance" title="Permanent link">&para;</a></h4>
-<p>Refer to <a href="../../faqs/plans/#preemptible-vs-dedicated-instances">this section</a></p>
+<p>Refer to <a href="../../faqs/plans/#preemptible-vs-dedicated-instances">this section</a> of
+the documentation for more information about dedicated and preemptible
+instances.</p>
 <h3 id="datasets">Dataset(s)<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
 <p>You can specify up to five datasources (datasets or outputs from previous jobs)
 to mount to the server that will be running your job. For each datasource,
@@ -1511,16 +1513,17 @@ specify the <code class="codehilite">--data</code> flag as detailed below:</p>
 <h3 id="mode">Mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h3>
 <p>FloydHub jobs can currently be run in one of three modes:</p>
 <ol>
-<li><code class="codehilite">--mode job</code></li>
+<li><code class="codehilite">--mode job</code> (DEFAULT)</li>
 <li><code class="codehilite">--mode jupyter</code></li>
 <li><code class="codehilite">--mode serve</code></li>
 </ol>
 <p>Here is a description of each mode:</p>
 <h4 id="-mode-job"><code class="codehilite">--mode job</code><a class="headerlink" href="#-mode-job" title="Permanent link">&para;</a></h4>
 <p>This is the default mode so there is no need to specify <code class="codehilite">--mode job</code> when
-running <code class="codehilite">floyd run</code>. You can think of this mode as "regular mode". When you run
-your job in this mode, your code is sent up to a FloydHub deep-learning server
-and the <a href="#command">[COMMAND]</a> portion of <code class="codehilite">floyd run</code> executed.</p>
+running <code class="codehilite">floyd run</code>. You can think of this mode as "regular mode" or "command
+mode". When you run your job in this mode, your code is sent up to a FloydHub
+deep-learning server and the <a href="#command">[COMMAND]</a> portion of <code class="codehilite">floyd run</code>
+is executed.</p>
 <h4 id="-mode-jupyter"><code class="codehilite">--mode jupyter</code><a class="headerlink" href="#-mode-jupyter" title="Permanent link">&para;</a></h4>
 <p>This is Jupyter Notebook mode. When you specify <code class="codehilite">--mode jupyter</code>, your code is
 uploaded to a FloydHub deep-learning server, and a Jupyter Notebook session is
@@ -1548,7 +1551,7 @@ requirements:</p>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This mode is currently in development, and not appropriate for production
+<p>This mode is currently in preview, and is not appropriate for production
 use.</p>
 </div>
 <h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
@@ -1560,9 +1563,25 @@ specification between a CPU server and a GPU server (that's the
 pre-installed.  You can find a list of all the available environments
 <a href="../../guides/environments">here</a>.</p>
 <p>Use the <code class="codehilite">--env</code> flag to specify which environment you would like your job to
-run in. It is best practice to pass the entire name of the environment,
+run in.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It is best practice to pass the entire name of the environment,
 including the version number, to the <code class="codehilite">--env</code> flag. For example, instead of
 <code class="codehilite">--env tensorflow</code>, use <code class="codehilite">--env tensorflow-1.3</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Examples</p>
+<div class="codehilite"><pre><span></span>$ floyd run --env tensorflow-1.3 <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ floyd run --env theano-0.8 <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+</div>
 <h3 id="message">Message<a class="headerlink" href="#message" title="Permanent link">&para;</a></h3>
 <p>Using <code class="codehilite">--message</code> or <code class="codehilite">-m</code>, you can specify a message that describes your job,
 similiar to the way a commit message describes a git commit. The job message
@@ -1611,7 +1630,8 @@ For example, try these simple examples and look at their logs:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="s2">&quot;echo &#39;Hello, world!&#39;&quot;</span>
 </pre></div>
 
-<p>Most commonly, you'll be kicking off a Pyton script in your <code class="codehilite">[COMMAND]</code> with something like:</p>
+<p>Most commonly you'll be kicking off a Python script with your <code class="codehilite">[COMMAND]</code>, with
+something like this:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="s2">&quot;python train.py&quot;</span>
 </pre></div>
 
@@ -1624,6 +1644,18 @@ For example, try these simple examples and look at their logs:</p>
 
 <p>For more examples, check out our
 <a href="../../guides/data/symlink_mounted_data/#1-using-the-command-portion-of-floyd-run">symlinking tutorial</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jupyter Note book mode (<code class="codehilite">--mode jupyter</code>) and serve mode (<code class="codehilite">--mode serve</code>)
+do not take a <code class="codehilite">[COMMAND]</code>. You'll kick off your job without passing a
+<code class="codehilite">[COMMAND],</code> with something like the following:</p>
+<div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 --mode jupyter
+</pre></div>
+
+<div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 --mode serve --data a/datasets/b/1:mount
+</pre></div>
+
 </div>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
