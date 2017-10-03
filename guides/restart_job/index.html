@@ -8,7 +8,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/home/getting_started/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/restart_job/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -20,7 +20,7 @@
     
     
       
-        <title>FloydHub Documentation</title>
+        <title>Restart a Job - FloydHub Documentation</title>
       
     
     
@@ -85,8 +85,12 @@
           
             
               
+                <span class="md-header-nav__parent">
+                  Jobs
+                </span>
+              
             
-            FloydHub Documentation
+            Restart a Job
           
         </span>
       </div>
@@ -310,7 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/basics/create_new/" title="Create a New Project" class="md-nav__link">
+    <a href="../basics/create_new/" title="Create a New Project" class="md-nav__link">
       Create a New Project
     </a>
   </li>
@@ -322,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/basics/delete/" title="Delete a Project" class="md-nav__link">
+    <a href="../basics/delete/" title="Delete a Project" class="md-nav__link">
       Delete a Project
     </a>
   </li>
@@ -337,8 +341,10 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
@@ -358,7 +364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/run_a_job/" title="Run a Job" class="md-nav__link">
+    <a href="../run_a_job/" title="Run a Job" class="md-nav__link">
       Run a Job
     </a>
   </li>
@@ -370,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/stop_job/" title="Stop a Job" class="md-nav__link">
+    <a href="../stop_job/" title="Stop a Job" class="md-nav__link">
       Stop a Job
     </a>
   </li>
@@ -380,11 +386,64 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../guides/restart_job/" title="Restart a Job" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Restart a Job
+      </label>
+    
+    <a href="./" title="Restart a Job" class="md-nav__link md-nav__link--active">
       Restart a Job
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-jobs-in-web-dashboard" title="Jupyter Notebook Jobs in Web Dashboard:" class="md-nav__link">
+    Jupyter Notebook Jobs in Web Dashboard:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floyd-cli" title="Using Floyd CLI:" class="md-nav__link">
+    Using Floyd CLI:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-job-in-web-dashboard" title="Jupyter Notebook Job in Web Dashboard:" class="md-nav__link">
+    Jupyter Notebook Job in Web Dashboard:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floyd-cli_1" title="Using Floyd CLI:" class="md-nav__link">
+    Using Floyd CLI:
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -394,7 +453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/jobs/tensorboard/" title="Enable Tensorboard" class="md-nav__link">
+    <a href="../jobs/tensorboard/" title="Enable Tensorboard" class="md-nav__link">
       Enable Tensorboard
     </a>
   </li>
@@ -406,7 +465,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/delete_job/" title="Delete a Job" class="md-nav__link">
+    <a href="../delete_job/" title="Delete a Job" class="md-nav__link">
       Delete a Job
     </a>
   </li>
@@ -418,7 +477,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/floyd_ignore/" title="Ignore Files" class="md-nav__link">
+    <a href="../floyd_ignore/" title="Ignore Files" class="md-nav__link">
       Ignore Files
     </a>
   </li>
@@ -430,7 +489,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/ssh/" title="SSH into a Job" class="md-nav__link">
+    <a href="../ssh/" title="SSH into a Job" class="md-nav__link">
       SSH into a Job
     </a>
   </li>
@@ -478,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/create_and_upload_dataset/" title="Create and Upload a Dataset" class="md-nav__link">
+    <a href="../create_and_upload_dataset/" title="Create and Upload a Dataset" class="md-nav__link">
       Create and Upload a Dataset
     </a>
   </li>
@@ -490,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/delete_dataset/" title="Delete a Dataset" class="md-nav__link">
+    <a href="../delete_dataset/" title="Delete a Dataset" class="md-nav__link">
       Delete a Dataset
     </a>
   </li>
@@ -502,7 +561,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/data/mounting_data/" title="Mount Data to a Job" class="md-nav__link">
+    <a href="../data/mounting_data/" title="Mount Data to a Job" class="md-nav__link">
       Mount Data to a Job
     </a>
   </li>
@@ -514,7 +573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/data/symlink_mounted_data/" title="Symlink Mounted Data" class="md-nav__link">
+    <a href="../data/symlink_mounted_data/" title="Symlink Mounted Data" class="md-nav__link">
       Symlink Mounted Data
     </a>
   </li>
@@ -550,7 +609,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/environments/" title="List of Available Environments" class="md-nav__link">
+    <a href="../environments/" title="List of Available Environments" class="md-nav__link">
       List of Available Environments
     </a>
   </li>
@@ -562,7 +621,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/jobs/installing_dependencies/" title="Install Extra Dependencies" class="md-nav__link">
+    <a href="../jobs/installing_dependencies/" title="Install Extra Dependencies" class="md-nav__link">
       Install Extra Dependencies
     </a>
   </li>
@@ -574,7 +633,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
+    <a href="../basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
       Using CPU vs GPU
     </a>
   </li>
@@ -598,7 +657,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/ssh/" title="SSH into a Job" class="md-nav__link">
+    <a href="../ssh/" title="SSH into a Job" class="md-nav__link">
       SSH into a Job
     </a>
   </li>
@@ -634,7 +693,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/data/storing_output/" title="Save Output" class="md-nav__link">
+    <a href="../data/storing_output/" title="Save Output" class="md-nav__link">
       Save Output
     </a>
   </li>
@@ -646,7 +705,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/delete_output/" title="Delete Output" class="md-nav__link">
+    <a href="../delete_output/" title="Delete Output" class="md-nav__link">
       Delete Output
     </a>
   </li>
@@ -658,7 +717,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/download_output/" title="Download Saved Output" class="md-nav__link">
+    <a href="../download_output/" title="Download Saved Output" class="md-nav__link">
       Download Saved Output
     </a>
   </li>
@@ -670,7 +729,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/browse_output/" title="Browse Saved Output" class="md-nav__link">
+    <a href="../browse_output/" title="Browse Saved Output" class="md-nav__link">
       Browse Saved Output
     </a>
   </li>
@@ -682,7 +741,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/reusing_output/" title="Using Previous Output in a New Job" class="md-nav__link">
+    <a href="../reusing_output/" title="Using Previous Output in a New Job" class="md-nav__link">
       Using Previous Output in a New Job
     </a>
   </li>
@@ -718,7 +777,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+    <a href="../basics/install/" title="Install Floyd CLI" class="md-nav__link">
       Install Floyd CLI
     </a>
   </li>
@@ -730,7 +789,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../guides/basics/login/" title="Log In Using Floyd CLI" class="md-nav__link">
+    <a href="../basics/login/" title="Log In Using Floyd CLI" class="md-nav__link">
       Log In Using Floyd CLI
     </a>
   </li>
@@ -1119,8 +1178,6 @@
       
       
 
-  
-
 
 
     
@@ -1138,8 +1195,41 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-jobs-in-web-dashboard" title="Jupyter Notebook Jobs in Web Dashboard:" class="md-nav__link">
+    Jupyter Notebook Jobs in Web Dashboard:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floyd-cli" title="Using Floyd CLI:" class="md-nav__link">
+    Using Floyd CLI:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-job-in-web-dashboard" title="Jupyter Notebook Job in Web Dashboard:" class="md-nav__link">
+    Jupyter Notebook Job in Web Dashboard:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-floyd-cli_1" title="Using Floyd CLI:" class="md-nav__link">
+    Using Floyd CLI:
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1151,11 +1241,48 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/home/getting_started.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/restart_job.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                <p><meta http-equiv="refresh" content="0;URL='../../getstarted/quick_start'"></meta></p>
-<h1 id="redirecting">Redirecting...<a class="headerlink" href="#redirecting" title="Permanent link">&para;</a></h1>
+                  <h1>Restart a Job</h1>
+                
+                <div class="admonition important">
+<p class="admonition-title">Quick Look</p>
+<h2 id="jupyter-notebook-jobs-in-web-dashboard">Jupyter Notebook Jobs in Web Dashboard:<a class="headerlink" href="#jupyter-notebook-jobs-in-web-dashboard" title="Permanent link">&para;</a></h2>
+<p><img alt="restart job image" src="../../../img/restart_jupyter.jpg" /></p>
+<h2 id="using-floyd-cli">Using Floyd CLI:<a class="headerlink" href="#using-floyd-cli" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ floyd restart mckay/projects/mnist/1 --gpu <span class="s2">&quot;python train.py&quot;</span>
+</pre></div>
+
+</div>
+<h2 id="jupyter-notebook-job-in-web-dashboard">Jupyter Notebook Job in Web Dashboard:<a class="headerlink" href="#jupyter-notebook-job-in-web-dashboard" title="Permanent link">&para;</a></h2>
+<p>Jupyter Notebook jobs can be restarted through the web dashboard. Navigate to
+the job's detail page, and click the <code class="codehilite">Restart</code> button in the top right corner
+as shown in the screenshot below:</p>
+<p><img alt="restart job image" src="../../../img/restart_jupyter.jpg" /></p>
+<p>This will start your Jupyter Notebook where you last left it. If you'd like to
+restart your job back where it <em>started</em>, just restart the previous job.</p>
+<p>Jupyter Notebook jobs can also be restarted using Floyd CLI, as detailed below.</p>
+<h2 id="using-floyd-cli_1">Using Floyd CLI:<a class="headerlink" href="#using-floyd-cli_1" title="Permanent link">&para;</a></h2>
+<p>All jobs can be restarted/re-run using Floyd CLI's <code class="codehilite">floyd restart</code> command. This
+command takes a <code class="codehilite">&lt;job_name&gt;</code>, and allows the same <code class="codehilite">[OPTIONS]</code> and <code class="codehilite">[COMMAND]</code>
+parameters as the <code class="codehilite">floyd run</code> command.</p>
+<p>This is most useful when you want to restart/re-run a job, but override certain
+parameters of the job (like upgrading its instance type) or overriding the
+<code class="codehilite">[COMMAND]</code> that was used in the job.</p>
+<p>Below are a few examples. Each examples restarts/re-runs the
+<code class="codehilite">mckay/projects/mnist/1</code> job, but overrides different parts of the job:</p>
+<div class="codehilite"><pre><span></span># Override the command
+$ floyd restart mckay/projects/mnist/1 &quot;python train.py&quot;
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Run the job on a GPU server
+$ floyd restart mckay/projects/mnist/1 --gpu
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Run the job with a new version of a dataset
+$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
+</pre></div>
                 
                   
                 
@@ -1174,7 +1301,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../install/" title="" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../stop_job/" title="Stop a Job" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1183,11 +1310,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                
+                Stop a Job
               </span>
             </div>
           </a>
         
+        
+          <a href="../jobs/tensorboard/" title="Enable Tensorboard" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Enable Tensorboard
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
