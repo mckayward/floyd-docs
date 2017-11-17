@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1013,8 +1025,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
-    floyd data output
+  <a href="#floyd-data-add" title="floyd data add" class="md-nav__link">
+    floyd data add
   </a>
   
     <nav class="md-nav">
@@ -1028,13 +1040,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#options_3" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#description_4" title="Description" class="md-nav__link">
     Description
   </a>
@@ -1043,6 +1048,47 @@
         
           <li class="md-nav__item">
   <a href="#example_4" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
+    floyd data output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -1564,8 +1610,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
-    floyd data output
+  <a href="#floyd-data-add" title="floyd data add" class="md-nav__link">
+    floyd data add
   </a>
   
     <nav class="md-nav">
@@ -1579,13 +1625,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#options_3" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#description_4" title="Description" class="md-nav__link">
     Description
   </a>
@@ -1594,6 +1633,47 @@
         
           <li class="md-nav__item">
   <a href="#example_4" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
+    floyd data output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_5" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_5" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -1660,6 +1740,10 @@
 <td>Delete your datasets</td>
 </tr>
 <tr>
+<td>floyd data add</td>
+<td>Add job output to dataset</td>
+</tr>
+<tr>
 <td>floyd data output</td>
 <td>View contents of a dataset</td>
 </tr>
@@ -1689,16 +1773,14 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the 
-current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already 
+<p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the
+current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already
 exists in Floyd. In case the dataset name does not exist, the CLI will open the create dataset page in your browser.</p>
-<p>The init command also creates a <code class="codehilite"><span class="na">.floydignore</span></code> file. Any files and directories you do not want Floyd to track can be added 
-to this file. When you upload this dataset to Floyd, these files will not be uploaded.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Initialize a floyd dataset in your data directory.
 <div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /data/mnist
-$ floyd data init mnist-data
-Data <span class="nb">source</span> <span class="s2">&quot;mnist-data&quot;</span> initialized in current directory
+$ floyd data init mnist
+Data <span class="nb">source</span> <span class="s2">&quot;mnist&quot;</span> initialized in current directory
 </pre></div></p>
 <hr />
 <h2 id="floyd-data-upload">floyd data upload<a class="headerlink" href="#floyd-data-upload" title="Permanent link">&para;</a></h2>
@@ -1711,12 +1793,13 @@ Data <span class="nb">source</span> <span class="s2">&quot;mnist-data&quot;</spa
 <p>Upload contents of the current directory as a new version of the dataset. This data can now be referred to in the <a href="../run/">run</a> command.
 At run time the data will be available at the <code class="codehilite">/input</code> path.</p>
 <p>Floyd also versions your data so you can choose any specific version to use in your runs.</p>
+<p>Currently this command does NOT respect a <code class="codehilite"><span class="na">.floydignore</span></code> file. This functionality may be added in the future.</p>
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <p><div class="codehilite"><pre><span></span>$ floyd data upload
 Creating data source. Uploading files ...
-DATA ID                 NAME                
-----------------------  ------------------
-GY3QRFFUA8KpbnqvroTPPW  alice/mnist-data:1  
+NAME
+--------------------
+alice/mnist-data:1
 </pre></div>
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. See <a href="../../guides/data/mounting_data/#mounting-datasets">here</a> for more details.</p>
@@ -1746,12 +1829,13 @@ using this data id. See <a href="../../guides/data/mounting_data/#mounting-datas
 </table>
 <h3 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h3>
 <p>Lists all your datasets on Floyd with more details.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ floyd data status
-DATA ID                 CREATED         DISK USAGE    NAME               
-----------------------  --------------  ------------  ------------------
-HYLEc2czGKRpYVm7rGtBoY  <span class="m">12</span> minutes ago  <span class="m">372</span>.0 MB      floydhub/mnist:1  
-qNcS5bXHtFdSiMZ35kkEPh  an hour ago     <span class="m">456</span>.2 MB      floydhub/csr:7    
+DATA NAME                         CREATED         STATUS    DISK USAGE
+--------------------------------  --------------  --------  ------------
+mckay/datasets/zeroes/1            <span class="m">57</span> seconds ago  valid     <span class="m">180</span>.0 KB
+mckay/datasets/mnist/1             <span class="m">2</span> minutes ago   valid     <span class="m">10</span>.0 KB
 </pre></div>
 
 <hr />
@@ -1784,19 +1868,40 @@ qNcS5bXHtFdSiMZ35kkEPh  an hour ago     <span class="m">456</span>.2 MB      flo
 </tbody>
 </table>
 <h3 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h3>
-<p>Deletes your datasets from FloydHub. This data will no longer 
+<p>Deletes your datasets from FloydHub. This data will no longer
 be accessible.</p>
-<p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
+<p>Note: You do <em>not</em> have to be in the project directory to run this command.
+This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>$ floyd data delete floydhub/csr:7
-Delete Data: floydhub/csr:7? <span class="o">[</span>y/N<span class="o">]</span>: y
+<div class="codehilite"><pre><span></span>$ floyd data delete mckay/datasets/mnist/1
+Delete Data: mckay/datasets/mnist/1? <span class="o">[</span>y/N<span class="o">]</span>: y
 Data deleted
 </pre></div>
 
 <hr />
+<h2 id="floyd-data-add">floyd data add<a class="headerlink" href="#floyd-data-add" title="Permanent link">&para;</a></h2>
+<p>Copy job output data to a dataset</p>
+<h3 id="usage_4">Usage<a class="headerlink" href="#usage_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>floyd data add ID
+</pre></div>
+
+<h3 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h3>
+<p>Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you
+want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
+This new data can now be referred to in the <a href="../run/">run</a> command.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
+<p><div class="codehilite"><pre><span></span>$ floyd data add mckay/projects/mnist/1/output
+DATA NAME                         CREATED    STATUS    DISK USAGE
+--------------------------------  ---------  --------  ------------
+mckay/datasets/mnist/1            just now   valid     <span class="m">10</span>.0 KB
+</pre></div>
+Floyd will generate a new version for the added data. This can be used in your future experiments, if needed,
+using this data id. See <a href="../../guides/data/mounting_data/#mounting-datasets">here</a> for more details.</p>
+<hr />
 <h2 id="floyd-data-output">floyd data output<a class="headerlink" href="#floyd-data-output" title="Permanent link">&para;</a></h2>
 <p>View datasets</p>
-<h3 id="usage_4">Usage<a class="headerlink" href="#usage_4" title="Permanent link">&para;</a></h3>
+<h3 id="usage_5">Usage<a class="headerlink" href="#usage_5" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>floyd data output <span class="o">[</span>OPTIONS<span class="o">]</span> ID
 </pre></div>
 
@@ -1822,11 +1927,11 @@ Data deleted
 </tr>
 </tbody>
 </table>
-<h3 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h3>
-<p>The output command gives the url to access a dataset. This command by default opens the data url 
+<h3 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h3>
+<p>The output command gives the url to access a dataset. This command by default opens the data url
 in your default browser.</p>
-<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ floyd data output floydhub/csr:11
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ floyd data output mckay/datasets/mnist/1
 Opening output directory in your browser ...
 </pre></div>
 

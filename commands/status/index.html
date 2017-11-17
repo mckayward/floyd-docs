@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -889,8 +901,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -1234,8 +1246,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -1289,14 +1301,16 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
+<p>Shows the status of a run, if the name is specified. It can also list the status of all
 the runs in the current project. You need to be in the project directory for this command to work.</p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span>$ floyd status
-RUN ID                  CREATED         STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  NAME                           INSTANCE      VERSION
-----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
-dTe2cJJrNR2CBD74rSZXPA  <span class="m">31</span> minutes ago  success             <span class="m">108</span>  floydhub/tensorflow-project:7  cpu                 <span class="m">2</span>
-B8wkLbuGs2mtjhe9jqrkYT  <span class="m">2</span> hours ago     success            <span class="m">2349</span>  floydhub/tensorflow-project:7  gpu                 <span class="m">1</span>
+JOB NAME                                 CREATED       STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
+---------------------------------        ------------  --------  -------------  ----------  -------------
+floydhub/projects/mnist-tensorboard/3    <span class="m">19</span> hours ago  success              <span class="m">16</span>  g1
+floydhub/projects/mnist-tensorboard/2    <span class="m">19</span> hours ago  success               <span class="m">3</span>  c1
+floydhub/projects/mnist-tensorboard/1    <span class="m">5</span> days ago    success              <span class="m">26</span>  c1
 </pre></div>
 
 <hr />

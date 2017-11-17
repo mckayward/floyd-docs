@@ -745,15 +745,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1207,6 +1219,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-did-i-get-a-long-running-floydhub-jupyter-job-detected-email" title="Why did I get a "Long running FloydHub Jupyter job detected" email?" class="md-nav__link">
+    Why did I get a "Long running FloydHub Jupyter job detected" email?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -1403,6 +1422,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-did-i-get-a-long-running-floydhub-jupyter-job-detected-email" title="Why did I get a "Long running FloydHub Jupyter job detected" email?" class="md-nav__link">
+    Why did I get a "Long running FloydHub Jupyter job detected" email?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -1484,10 +1510,10 @@ command, Tensorflow will allocate the entire GPU memory to the current session a
 <h3 id="can-i-view-my-jupyter-notebook-after-my-job-has-stopped">Can I view my Jupyter Notebook after my job has stopped?<a class="headerlink" href="#can-i-view-my-jupyter-notebook-after-my-job-has-stopped" title="Permanent link">&para;</a></h3>
 <p>Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the <code class="codehilite">/output</code> dir. So, your work is not lost after your job has ended, shutdown or timed out.</p>
 <p>You can view your saved Notebook using the <a href="../../commands/output/">floyd output</a> command. Example:</p>
-<div class="codehilite"><pre><span></span>$ floyd output saip/projects/mnist-pytorch/3
+<div class="codehilite"><pre><span></span>$ floyd output redeipirati/projects/pytorch-fast-neural-style/3/output
 </pre></div>
 
-<p>Or in the <code class="codehilite">Output</code> tab of your job on the web dashboard, example: <code class="codehilite">www.floydhub.com/saip/projects/mnist-pytorch/3/output</code></p>
+<p>Or in the <code class="codehilite">Output</code> tab of your job on the web dashboard, example: <code class="codehilite">www.floydhub.com/redeipirati/projects/pytorch-fast-neural-style/3/output</code></p>
 <h3 id="can-i-restart-a-stopped-or-timed-out-job">Can I restart a stopped or timed out job?<a class="headerlink" href="#can-i-restart-a-stopped-or-timed-out-job" title="Permanent link">&para;</a></h3>
 <p>Unfortunately, not directly. We will be implementing a single command to do this soon!</p>
 <p>In the meanwhile, you can follow these steps to do this manually:</p>
@@ -1496,7 +1522,7 @@ command, Tensorflow will allocate the entire GPU memory to the current session a
 </ul>
 <div class="codehilite"><pre><span></span><span class="c1"># Download the saved Notebook from previous job</span>
 <span class="c1"># NOTE: This will overwrite the contents of your current dir</span>
-$ floyd data clone saip/projects/mnist-pytorch/3/output
+$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3/output
 
 <span class="c1"># Start a new job</span>
 $ floyd run --mode jupyter
@@ -1551,6 +1577,9 @@ $ floyd run --mode jupyter
 <p>This happens when your machine runs out of memory (OOM). i.e. your job consumes more memory than is available on our CPU machines.</p>
 <p>All jobs run on FloydHub are executed inside a Docker container. Our current CPU machines have <a href="https://www.floydhub.com/pricing">7GB memory</a>. When memory used by your job exceeds 7GB, Docker automatically kills the job to protect the system and avoid abuse.</p>
 <p>The resolution is to optimize your code to consume less memory. For example, read less data into your in-memory datastructures or reduce your batch size. We will be introducing more powerful CPUs, which higher memory in the near future.</p>
+<h3 id="why-did-i-get-a-long-running-floydhub-jupyter-job-detected-email">Why did I get a "Long running FloydHub Jupyter job detected" email?<a class="headerlink" href="#why-did-i-get-a-long-running-floydhub-jupyter-job-detected-email" title="Permanent link">&para;</a></h3>
+<p>FloydHub monitors Jupyter notebook instances that are no longer actively used and notifies the owner. This is a reminder in case the user forgot to turn off the instance after use and should help save resources.</p>
+<p>Note: If you create <a href="../../guides/ssh/">Terminals within Jupyter notebooks</a>, this feature will not work. This is because FloydHub cannot reliably detect if the instance is being used or not.</p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 

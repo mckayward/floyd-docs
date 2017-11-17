@@ -908,15 +908,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1636,7 +1648,7 @@ similiar to the way a commit message describes a git commit. The job message
 will be displayed at various places on floydhub.com and is useful when
 reviewing past jobs that you'd like to iterate on.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>$ floyd run -m <span class="s2">&quot;lorem ipsum&quot;</span> <span class="s2">&quot;python my_first_script.py&quot;</span>
+<div class="codehilite"><pre><span></span>$ floyd run -m <span class="s2">&quot;lorem ipsum&quot;</span> <span class="s2">&quot;echo &#39;hello world&#39;&quot;</span>
 Creating project run. Total upload size: <span class="m">195</span>.0B
 Syncing code ...
 <span class="o">[================================]</span> <span class="m">1254</span>/1254 - <span class="m">00</span>:00:00
@@ -1701,7 +1713,7 @@ do not take a <code class="codehilite">[COMMAND]</code>. You'll kick off your jo
 <div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 --mode jupyter
 </pre></div>
 
-<div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 --mode serve --data a/datasets/b/1:mount
+<div class="codehilite"><pre><span></span>$ floyd run --env pytorch-0.2 --mode serve --data mckay/datasets/mnist/1:mount
 </pre></div>
 
 </div>

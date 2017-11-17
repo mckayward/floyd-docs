@@ -438,6 +438,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameter-sweeping" title="Parameter sweeping:" class="md-nav__link">
+    Parameter sweeping:
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -800,15 +807,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1227,6 +1246,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameter-sweeping" title="Parameter sweeping:" class="md-nav__link">
+    Parameter sweeping:
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -1261,28 +1287,54 @@ the job's detail page, and click the <code class="codehilite">Restart</code> but
 as shown in the screenshot below:</p>
 <p><img alt="restart job image" src="../../../img/restart_jupyter.jpg" /></p>
 <p>This will start your Jupyter Notebook where you last left it. If you'd like to
-restart your job back where it <em>started</em>, just restart the previous job.</p>
+restart your job back where it <em>started</em>, just restart the previous job. See the
+restart workflow in action:</p>
+<p><img alt="restart job image" src="../../../img/restart_jupyter.gif" /></p>
 <p>Jupyter Notebook jobs can also be restarted using Floyd CLI, as detailed below.</p>
 <h2 id="using-floyd-cli_1">Using Floyd CLI:<a class="headerlink" href="#using-floyd-cli_1" title="Permanent link">&para;</a></h2>
 <p>All jobs can be restarted/re-run using Floyd CLI's <code class="codehilite">floyd restart</code> command. This
 command takes a <code class="codehilite">&lt;job_name&gt;</code>, and allows the same <code class="codehilite">[OPTIONS]</code> and <code class="codehilite">[COMMAND]</code>
-parameters as the <code class="codehilite">floyd run</code> command.</p>
+parameters as the <code class="codehilite">floyd run</code> command. You can specify a <a href="../../guides/shortnames">shortened job
+name</a> to this command.</p>
 <p>This is most useful when you want to restart/re-run a job, but override certain
 parameters of the job (like upgrading its instance type) or overriding the
 <code class="codehilite">[COMMAND]</code> that was used in the job.</p>
 <p>Below are a few examples. Each examples restarts/re-runs the
-<code class="codehilite">mckay/projects/mnist/1</code> job, but overrides different parts of the job:</p>
+<code class="codehilite">mckay/projects/quick-start/1</code> job, but overrides different parts of the job:</p>
 <div class="codehilite"><pre><span></span># Override the command
-$ floyd restart mckay/projects/mnist/1 &quot;python train.py&quot;
+$ floyd restart mckay/projects/quick-start/1 &quot;python train.py&quot;
 </pre></div>
 
 <div class="codehilite"><pre><span></span># Run the job on a GPU server
-$ floyd restart mckay/projects/mnist/1 --gpu
+$ floyd restart mckay/projects/quick-start/1 --gpu
 </pre></div>
 
 <div class="codehilite"><pre><span></span># Run the job with a new version of a dataset
-$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
+$ floyd restart mckay/projects/quick-start/1 --data mckay/datasets/mnist/1:mnist
 </pre></div>
+
+<h2 id="parameter-sweeping">Parameter sweeping:<a class="headerlink" href="#parameter-sweeping" title="Permanent link">&para;</a></h2>
+<p>A great use case for the restart command is when you need to run a series of jobs with
+different training parameters. You just need to make your training script take in all the
+parameters from the command line. After you run the first job using the <code class="codehilite">floyd run</code> command:</p>
+<div class="codehilite"><pre><span></span><span class="n">#</span><span class="w"> </span><span class="n">Run</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="n">parameters</span><span class="w"></span>
+<span class="n">$</span><span class="w"> </span><span class="n">floyd</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">gpu</span><span class="w"> </span><span class="n">&quot;python</span><span class="w"> </span><span class="n">train</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">learning-rate</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="o">--</span><span class="n">batch-size</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">--</span><span class="n">epochs</span><span class="w"> </span><span class="mi">100</span><span class="n">&quot;</span><span class="w"></span>
+<span class="o">...</span><span class="w"></span>
+<span class="kd">JOB</span><span class="o"> </span><span class="n">NAME</span><span class="w"></span>
+<span class="o">--------------------------------</span><span class="w"></span>
+<span class="n">mckay/projects/tf-grid-search/1</span><span class="w"></span>
+</pre></div>
+
+<p>Now you can just restart this job with different set of parameters:</p>
+<div class="codehilite"><pre><span></span># Change the learning rate
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu &quot;python train.py --learning-rate 0.05 --batch-size 8 --epochs 100&quot;
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Change the number of epochs
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu &quot;python train.py --learning-rate 0.05 --batch-size 8 --epochs 500&quot;
+</pre></div>
+
+<p>This gives you the ability to try a range of parameters without uploading your code each time.</p>
                 
                   
                 

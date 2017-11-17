@@ -786,15 +786,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1219,16 +1231,33 @@
                   <h1>Delete a Job</h1>
                 
                 <p>You can delete an individual job by clicking on <strong>Delete job</strong> button on the Settings tab of the job's page on the web dashboard.</p>
-<p>Example: <code class="codehilite">https://www.floydhub.com/alice/projects/quick-start/1/settings</code></p>
+<p>Example: <code class="codehilite">https://www.floydhub.com/mckay/projects/quick-start/1/settings</code></p>
 <p><img alt="Delete job" src="../../../img/delete-job.jpg" /></p>
 <h3 id="deleting-a-job-using-the-cli">Deleting a job using the CLI<a class="headerlink" href="#deleting-a-job-using-the-cli" title="Permanent link">&para;</a></h3>
 <p>You can also delete a job from the CLI using the <a href="../../../commands/delete">floyd delete</a> command.</p>
-<div class="codehilite"><pre><span></span>$ floyd delete alice/projects/quick-start/1
+<div class="codehilite"><pre><span></span>$ floyd delete mckay/projects/quick-start/1
 
-Delete Run: alice/quick-start/1? <span class="o">[</span>y/N<span class="o">]</span>: y
-Job BD4JMXSgCi2r2afbq3n3Vo: Deleted
+Delete Run: mckay/quick-start/1? <span class="o">[</span>y/N<span class="o">]</span>: y
+Job mckay/quick-start/1 Deleted
 </pre></div>
 
+<p>Floyd CLI is fairly smart at resolving job names. It defaults to using your
+username, the project initialized in the directory you're working in, and the
+latest job number. So if you don't pass a job name to <code class="codehilite">floyd delete</code>, it will
+delete your most recent job. Here are a couple examples of shortened job names
+that are valid:</p>
+<div class="codehilite"><pre><span></span># Deletes the most recent job for your user&#39;s project called &#39;foo&#39;
+$ floyd delete foo
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Deletes job 2 for your user&#39;s project called &#39;foo&#39;
+$ floyd delete foo/2
+</pre></div>
+
+<p>The same job-name shortcuts available for <code class="codehilite">floyd delete</code> are available whenever
+you need to specify a job name, including with <code class="codehilite">floyd status &lt;job_name&gt;</code>.</p>
+<p>For more information on using shortened names, see
+<a href="../../guides/shortnames">this article</a></p>
 <h3 id="deleting-output-of-a-job">Deleting output of a Job<a class="headerlink" href="#deleting-output-of-a-job" title="Permanent link">&para;</a></h3>
 <p>It is not possible to delete just the output of a job. You will have to delete the job itself.</p>
                 

@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1294,16 +1306,17 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Deletes a job from FloydHub. The experiment information is no longer 
-available. You will not be able to access the code uploaded to run the 
-experiment. You need to make sure that the project is currently not 
+<p>Deletes a job from FloydHub. The experiment information is no longer
+available. You will not be able to access the code uploaded to run the
+experiment. You need to make sure that the project is currently not
 running. If so, you can use the <a href="../stop/">stop</a> command for that.</p>
 <p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ floyd delete J2ggstKWTNmL24nQTgi36o qNcS5bXHtFdSiMZ35kkEPh
-Delete Run: floydhub/fastText:1? <span class="o">[</span>y/N<span class="o">]</span>: y
+<div class="codehilite"><pre><span></span>$ floyd delete floydhub/projects/fastText/1 floydhub/projects/cnr/1
+Delete Run: floydhub/projects/fastText/1? <span class="o">[</span>y/N<span class="o">]</span>: y
 Experiment deleted
-Delete Run: floydhub/cnr:1? <span class="o">[</span>y/N<span class="o">]</span>: y
+Delete Run: floydhub/projects/cnr/1? <span class="o">[</span>y/N<span class="o">]</span>: y
 Experiment deleted
 </pre></div>
 

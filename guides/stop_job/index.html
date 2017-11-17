@@ -786,15 +786,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1231,18 +1243,33 @@ on <a href="https://www.floydhub.com">floydhub.com</a>.</p>
 <h2 id="using-the-cli">Using the CLI<a class="headerlink" href="#using-the-cli" title="Permanent link">&para;</a></h2>
 <p>A job can be stopped using the <code class="codehilite">floyd stop</code> command and passing it the name of
 your job, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd stop mckay/projects/my-project/4
+<div class="codehilite"><pre><span></span>$ floyd stop mckay/projects/ssh/2
 Experiment shutdown request submitted. Check status to confirm shutdown
+</pre></div>
+
+<p>Floyd CLI is fairly smart at resolving job names. It defaults to using your
+username, the project initialized in the directory you're working in, and the
+latest job number. So if you don't pass a job name to <code class="codehilite">floyd stop</code>, it will
+stop your most recent job. Here are a couple examples of shortened job names
+that are valid:</p>
+<div class="codehilite"><pre><span></span># Stops the most recent job for your user&#39;s project called &#39;foo&#39;
+$ floyd stop foo
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Stops job 2 for your user&#39;s project called &#39;foo&#39;
+$ floyd stop foo/2
 </pre></div>
 
 <p>To check the status of your job to make sure it has shut down properly, use the
 <code class="codehilite">floyd status</code> command, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd status mckay/projects/my-project/4
+<div class="codehilite"><pre><span></span>$ floyd status mckay/projects/ssh/2
 JOB NAME                     CREATED         STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
 ---------------------------  --------------  --------  -------------  ----------  -------------
-mckay/projects/my-project/4  <span class="m">47</span> seconds ago  shutdown              <span class="m">0</span>  c1
+mckay/projects/ssh/2         <span class="m">47</span> seconds ago  shutdown             <span class="m">24</span>  c1
 </pre></div>
 
+<p>The same job-name shortcuts available for <code class="codehilite">floyd stop</code> are available whenever
+you need to specify a job name, including with <code class="codehilite">floyd status &lt;job_name&gt;</code>.</p>
 <h2 id="using-floydhubcom">Using floydhub.com<a class="headerlink" href="#using-floydhubcom" title="Permanent link">&para;</a></h2>
 <p>On the project page, click the <code class="codehilite">Cancel</code> button below the icon that shows the status of your job, as shown in the picture below:</p>
 <p><img alt="Stop Job" src="../../img/stop_job.jpg" /></p>

@@ -793,15 +793,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1281,10 +1293,10 @@ Syncing code ...
 
 JOB NAME
 ----------------------
-alice/projects/mnist-cnn/1
+mckay/projects/mnist-cnn/1
 
 To view logs enter:
-   floyd logs alice/projects/mnist-cnn/1
+   floyd logs mckay/projects/mnist-cnn/1
 </pre></div>
 
 <p>Here's what Floyd did when you ran that command:</p>
@@ -1298,7 +1310,7 @@ To view logs enter:
 </li>
 <li>
 <p>View your job's logs in real time using the <code class="codehilite">floyd logs -t</code> command:</p>
-<div class="codehilite"><pre><span></span>$ floyd logs -t alice/projects/mnist-cnn/1
+<div class="codehilite"><pre><span></span>$ floyd logs -t
 <span class="m">2017</span>-09-27 <span class="m">14</span>:14:40,364 INFO - Starting attempt <span class="m">1</span> at <span class="m">2017</span>-09-27 <span class="m">14</span>:14:40.358414
 <span class="m">2017</span>-09-27 <span class="m">14</span>:14:40,399 INFO - Downloading and setting up data sources
 <span class="m">2017</span>-09-27 <span class="m">14</span>:14:40,534 INFO - Pulling Docker image: floydhub/tensorflow:1.3.0-py3_aws.12
@@ -1309,8 +1321,6 @@ To view logs enter:
 ...
 </pre></div>
 
-<p>Be sure to use the <code class="codehilite"><span class="kd">JOB</span><span class="o"> </span><span class="n">NAME</span><span class="w"></span></code> that was printed out when you ran the
-<code class="codehilite">floyd run</code> command.</p>
 </li>
 </ol>
 <p>Congratulations! You've trained and tested your first model on FloydHub 🎉</p>

@@ -754,15 +754,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1170,17 +1182,16 @@ This allows you to iterate on the ouput of a past job. Output is mounted to a
 job in the same way data is. To learn more about mounting data, see <a href="../data/storing_output">this
 guide</a>.</p>
 <p>You can refer to the output of a job by its name with <code class="codehilite">/output</code> appended to it.
-For example: <code class="codehilite">floydhub/projects/handwriting-recognition/12/output</code> refers to
-the output of the job <code class="codehilite">floydhub/projects/handwriting-recognition/12</code></p>
+For example: <code class="codehilite">mckay/projects/quick-start/1/output</code> refers to
+the output of the job <code class="codehilite">mckay/projects/quick-start/1</code></p>
 <p>Use the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command, mount past output to a job,
 just as you would to mount a dataset. For example:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
-  --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data <span class="se">\</span>
-  <span class="s2">&quot;python train.py&quot;</span>
+  --data mckay/projects/quick-start/1/output:/model <span class="s2">&quot;python train.py&quot;</span>
 </pre></div>
 
-<p>This will make the output of <code class="codehilite">floydhub/projects/handwriting-recognition/12</code>
-available at <code class="codehilite">/filtered_training_data</code> for the new job to use.</p>
+<p>This will make the output of <code class="codehilite">mckay/projects/quick-start/12</code>
+available at <code class="codehilite">/model</code> for the new job to use.</p>
 <p>Note: You need to have access to a job to be able to mount its output.</p>
                 
                   

@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1487,14 +1499,14 @@
 <p>This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress
 with <a href="../status">status</a> command. To view the logs from your code use <a href="../logs">logs</a> command.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ floyd run <span class="s2">&quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;</span>
+<div class="codehilite"><pre><span></span>$ floyd run --env tensorflow --gpu <span class="s2">&quot;python mnist_cnn.py&quot;</span>
 Syncing code ...
-RUN ID                  NAME
-----------------------  -----------------------------
-dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project/7
+NAME
+-----------------------------
+floydhub/projects/lung-cancer/2
 
 ...
-$ floyd logs floydhub/tensorflow-project/7
+$ floyd logs floydhub/projects/lung-cancer/2
 </pre></div>
 
 <h3 id="floyd_requirementstxt">floyd_requirements.txt<a class="headerlink" href="#floyd_requirementstxt" title="Permanent link">&para;</a></h3>
@@ -1523,7 +1535,7 @@ Path to jupyter notebook: https://www.floydhub.com/notebooks/g8uGRZFQz85meArJGTo
 datasets you uploaded and output datasets of your previous runs. You can specify the mount point
 also when you specify the data id to mount.</p>
 <h4 id="example_3">Example:<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<p><div class="codehilite"><pre><span></span>$ floyd run --data floydhub/datasets/cifar/1:training --data floydhub/datasets/faces/21:testing <span class="s2">&quot;python script.py&quot;</span>
+<p><div class="codehilite"><pre><span></span>$ floyd run --data udacity/datasets/celeba/1:training --data udacity/datasets/mnist/1:testing <span class="s2">&quot;python script.py&quot;</span>
 </pre></div>
 The above datasets will be mounted at <code class="codehilite">/training</code> and <code class="codehilite">/testing</code> respectively.</p>
 <h3 id="serve">Serve<a class="headerlink" href="#serve" title="Permanent link">&para;</a></h3>

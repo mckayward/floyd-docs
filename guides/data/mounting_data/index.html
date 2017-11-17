@@ -888,15 +888,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1465,7 +1477,7 @@ command as detailed below.</p>
 <p>To properly use the <code class="codehilite">--data</code> flag with <code class="codehilite">floyd run</code>, you need to specify two
 things:</p>
 <ol>
-<li>The name of the dataset you want to mount.</li>
+<li>The name of the dataset you want to mount. (Note: this command can take <a href="../../shortnames">shortened dataset and output names</a>)</li>
 <li>A name for the folder where the data will be
   accessible to your code during the job, we call this the "mount point". You
   can give this folder (mount point) any name you want.</li>
@@ -1520,29 +1532,29 @@ The Jupyter Notebook will have access to the VGGNet pre-trained models under
 <p>You can link jobs by mounting the output of one job as the input of a new job.
 This allows you to iterate on the ouput of a past job.</p>
 <p>You can refer to the output of a job by its name with <code class="codehilite">/output</code> appended to it.
-For example: <code class="codehilite">floydhub/projects/handwriting-recognition/12/output</code> refers to
-the output of the job <code class="codehilite">floydhub/projects/handwriting-recognition/12</code></p>
+For example: <code class="codehilite">mckay/projects/quick-start/1/output</code> refers to
+the output of the job <code class="codehilite">mckay/projects/quick-start/1</code></p>
 <p>Use the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command, mount past output to a job,
 just as you would to mount a dataset. For example:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
-  --data floydhub/projects/handwriting-recognition/12/output:filtered_training_data <span class="se">\</span>
-  <span class="s2">&quot;python train.py&quot;</span>
+  --data mckay/projects/quick-start/1/output:/model
+  <span class="s1">&#39;python eval.py&#39;</span>
 </pre></div>
 
-<p>This will make the output of <code class="codehilite">floydhub/projects/handwriting-recognition/12</code>
-available at <code class="codehilite">/filtered_training_data</code> for the new job to use.</p>
+<p>This will make the output of <code class="codehilite">mckay/projects/quick-start/1</code>
+available at <code class="codehilite">/model</code> for the new job to use.</p>
 <p>Note: You need to have access to a job to be able to mount its output.</p>
 <h3 id="mounting-multiple-datasources">Mounting multiple datasources<a class="headerlink" href="#mounting-multiple-datasources" title="Permanent link">&para;</a></h3>
 <p>You can attach up to five datasources (datasets and/or job outputs) to a job
 using the <code class="codehilite">--data</code> flag in the <code class="codehilite">floyd run</code> command. Ensure that each mount
 point is unique.</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
-  --data floydhub/datasets/mnist/2:training <span class="se">\</span>
-  --data floydhub/datasets/digits/1:test <span class="se">\</span>
+  --data udacity/datasets/mnist/1:digits <span class="se">\</span>
+  --data udacity/datasets/celeba/1:celeb <span class="se">\</span>
   <span class="s2">&quot;python script.py&quot;</span>
 </pre></div>
 
-<p>In this case, the above datasets will be mounted at <code class="codehilite">/training</code> and <code class="codehilite">/test</code>,
+<p>In this case, the above datasets will be mounted at <code class="codehilite">/digits</code> and <code class="codehilite">/celeb</code>,
 respectively.</p>
 <h3 id="viewing-mounted-datasets-in-the-web-dashboard">Viewing mounted datasets in the web dashboard<a class="headerlink" href="#viewing-mounted-datasets-in-the-web-dashboard" title="Permanent link">&para;</a></h3>
 <p>You can view the mounted datasets and their respective mount points for a
@@ -1570,7 +1582,7 @@ consists of three parts:</p>
 <li>Dataset Name</li>
 <li>Version</li>
 </ol>
-<p>For example: <code class="codehilite">floydhub/datasets/mnist/2</code></p>
+<p>For example: <code class="codehilite">udacity/datasets/mnist/1</code></p>
 <h3 id="default-mount-points">Default mount points<a class="headerlink" href="#default-mount-points" title="Permanent link">&para;</a></h3>
 <p>We highly recommend that you explicitly specify the mount points for your data
 using the <code class="codehilite">--data &lt;data_name&gt;:&lt;mount_point&gt;</code> convention.</p>

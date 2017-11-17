@@ -868,15 +868,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1416,7 +1428,7 @@ $ <span class="nb">cd</span> quick-start-pytorch
 $ README.md mnist.ipynb
 </pre></div>
 
-<p>In this guide, we will use the <code class="codehilite">mnist_cnn.ipynb</code> Jupyter Notebook.</p>
+<p>In this guide, we will use the <code class="codehilite">mnist.ipynb</code> Jupyter Notebook.</p>
 <h3 id="initialize-new-project">Initialize new project<a class="headerlink" href="#initialize-new-project" title="Permanent link">&para;</a></h3>
 <p>Now that we have the code, we want to associate this directory with the new project you just created on FloydHub. Ensure that you are inside the <code class="codehilite">quick-start-pytorch</code> directory and execute:</p>
 <div class="codehilite"><pre><span></span>$ floyd init mnist-pytorch
@@ -1433,7 +1445,7 @@ Syncing code ...
 <span class="o">[================================]</span> <span class="m">23333</span>/23333 - <span class="m">00</span>:00:00
 NAME
 --------------------
-saip/projects/mnist-pytorch/3
+mckay/projects/mnist-pytorch/2
 
 Setting up your instance and waiting <span class="k">for</span> Jupyter notebook to become available ..............
 
@@ -1456,10 +1468,10 @@ Path to jupyter notebook: https://www.floydhub.com/notebooks/pCoPyzZtYeo6mE9PpSW
 <p><img alt="job status in dashboard" src="../../../img/project_page_job_status.jpg" /></p>
 <p>Alternatively, you can view the status from your terminal using the
 <a href="../../commands/status/"><code class="codehilite">floyd status</code></a> command:</p>
-<div class="codehilite"><pre><span></span>$ floyd status saip/mnist-pytorch/projects/3
-JOB NAME                CREATED         STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
-----------------------  --------------  --------  -------------  ----------  -------------
-saip/mnist-pytorch/projects/3    <span class="m">16</span> minutes ago  running               <span class="m">0</span>  gpu
+<div class="codehilite"><pre><span></span>$ floyd status mckay/mnist-pytorch/projects/2
+JOB NAME                          CREATED         STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
+----------------------            --------------  --------  -------------  ----------  -------------
+mckay/mnist-pytorch/projects/2    <span class="m">16</span> minutes ago  running               <span class="m">0</span>  gpu
 </pre></div>
 
 <h3 id="stopping-your-notebook">Stopping your Notebook<a class="headerlink" href="#stopping-your-notebook" title="Permanent link">&para;</a></h3>

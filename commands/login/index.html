@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1300,24 +1312,40 @@
 <td>False</td>
 <td>If specified, browser will not open. You can paste your token in the command line. <br><strong>Note</strong>: This is only supported with <code class="codehilite">version 0.7.2+</code> of <code class="codehilite">floyd-cli</code>. If you get an error, please upgrade using <code class="codehilite">pip install -U floyd-cli</code> and try again</td>
 </tr>
+<tr>
+<td><code class="codehilite">--username</code></td>
+<td>False</td>
+<td>FloydHub username. If specified, must include <code class="codehilite">--password</code></td>
+</tr>
+<tr>
+<td><code class="codehilite">--password</code></td>
+<td>False</td>
+<td>FloydHub password</td>
+</tr>
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
 <p>You need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub 
 website. You will be prompted to enter you credentials to get your access token. Copy and paste the token on the command line 
 to complete login.</p>
+<p>Alternatively, you can use the username and password parameters to directly login from the command line. In case you
+run in to any issues logging in with username / password, try logging in with the token as explain above.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>To automatically open your browser
 <div class="codehilite"><pre><span></span>$ floyd login
 Authentication token page will now open in your browser. Continue? <span class="o">[</span>Y/n<span class="o">]</span>:
 Please paste the token here:
-Login Successful
+Login Successful as alice
 </pre></div></p>
 <p>In case you use remote machines and do not have access to the browser, you can copy the token from the 
 <a href="https://www.floydhub.com/welcome">dashboard</a> and use the <code class="codehilite">--token</code> parameter when you login.
 <div class="codehilite"><pre><span></span>$ floyd login --token
 Please copy and paste the token here:
-Login Successful
+Login Successful as alice
+</pre></div></p>
+<p>If you are using the credentials directly:
+<div class="codehilite"><pre><span></span>$ floyd login --username alice --password &lt;redacted&gt;
+Login Successful as alice
 </pre></div></p>
 <h3 id="authentication-tokens">Authentication Tokens<a class="headerlink" href="#authentication-tokens" title="Permanent link">&para;</a></h3>
 <p>Floyd uses <a href="https://jwt.io/introduction/">Json Web Tokens</a> for authentication. Your 

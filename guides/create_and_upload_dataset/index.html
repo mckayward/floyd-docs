@@ -547,6 +547,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#download-large-datasets-directly-to-floydhub-from-the-internet" title="Download large datasets directly to FloydHub from the internet" class="md-nav__link">
+    Download large datasets directly to FloydHub from the internet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-run-a-terminal-on-floydhub-servers-using-jupyter-mode" title="Step 1: Run a terminal on FloydHub servers using Jupyter mode" class="md-nav__link">
+    Step 1: Run a terminal on FloydHub servers using Jupyter mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output" title="Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output" class="md-nav__link">
+    Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -813,15 +840,27 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1253,6 +1292,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#download-large-datasets-directly-to-floydhub-from-the-internet" title="Download large datasets directly to FloydHub from the internet" class="md-nav__link">
+    Download large datasets directly to FloydHub from the internet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-run-a-terminal-on-floydhub-servers-using-jupyter-mode" title="Step 1: Run a terminal on FloydHub servers using Jupyter mode" class="md-nav__link">
+    Step 1: Run a terminal on FloydHub servers using Jupyter mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output" title="Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output" class="md-nav__link">
+    Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
     </ul>
@@ -1286,6 +1352,8 @@ versioning data.</p>
 an open source project, this is a great way to share and contribute to the
 FloydHub community. If your data is proprietary, please select <code class="codehilite">Private</code>. This
 will ensure that only you and your team will have access to this dataset.</p>
+<p>The section below shows how to upload a dataset from your local machine. If your
+data is available on the internet, you can can <a href="#download-large-datasets-directly-to-floydhub-from-the-internet">create a dataset out of it directly</a>.</p>
 <h2 id="upload-a-dataset">Upload a Dataset<a class="headerlink" href="#upload-a-dataset" title="Permanent link">&para;</a></h2>
 <p>Once you have created a dataset, you can upload data from your terminal using
 the <a href="../../../commands/data">floyd data</a> command:</p>
@@ -1351,10 +1419,10 @@ for you. If you have a large dataset, unpacking your data on FloydHub's servers
 can take a while.</p>
 <p>You can check the status of your upload using <code class="codehilite">floyd data status</code> with the name
 of your dataset, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd data status mckay/datasets/my_dataset/1
+<div class="codehilite"><pre><span></span>$ floyd data status mckay/datasets/mnist/1
 DATA NAME                    CREATED        STATUS    DISK USAGE
 ---------------------------  -------------  --------  ------------
-mckay/datasets/my_dataset/1  <span class="m">3</span> minutes ago  valid     <span class="m">82</span>.96 MB
+mckay/datasets/mnist/1       <span class="m">3</span> minutes ago  valid     <span class="m">82</span>.96 MB
 </pre></div>
 
 <p><code class="codehilite">valid</code> is the state you're looking for. That means that your dataset has finished being unpacked and is ready to use.</p>
@@ -1363,6 +1431,53 @@ mckay/datasets/my_dataset/1  <span class="m">3</span> minutes ago  valid     <sp
 <p>It will not save you time to compress your dataset before uploading it,
 since Floyd CLI already compresses your dataset to minimize upload time.</p>
 </div>
+<h2 id="download-large-datasets-directly-to-floydhub-from-the-internet">Download large datasets directly to FloydHub from the internet<a class="headerlink" href="#download-large-datasets-directly-to-floydhub-from-the-internet" title="Permanent link">&para;</a></h2>
+<p>Often times, it might not be practical to upload datasets to FloydHub from your local machine. For example, your upload speeds might be too slow, or you just don't want to download a large dataset from the internet just to upload it again.</p>
+<p>If your data is already available on the internet, then you can create a dataset directly on FloydHub.</p>
+<h3 id="step-1-run-a-terminal-on-floydhub-servers-using-jupyter-mode">Step 1: Run a terminal on FloydHub servers using Jupyter mode<a class="headerlink" href="#step-1-run-a-terminal-on-floydhub-servers-using-jupyter-mode" title="Permanent link">&para;</a></h3>
+<p>You can create a terminal session on FloydHub. Here are the quick steps:</p>
+<ul>
+<li>Run a Jupyter Notebook job using a CPU instance</li>
+</ul>
+<div class="codehilite"><pre><span></span>$ floyd run --mode jupyter
+</pre></div>
+
+<ul>
+<li>Once your Jupyter server starts, create a Terminal</li>
+</ul>
+<p><img alt="Jupyter Notebook Terminal Button" src="../../img/jupyter_terminal_button.jpg" /></p>
+<ul>
+<li>Once you're in the terminal, you'll automatically be in the <code class="codehilite">/output</code> directory, but you can always confirm with the <code class="codehilite">pwd</code> command. From here, you can download your data to your FloydHub instance.</li>
+</ul>
+<p>Here is an example that downloads a CSV with details about members of the United States Congress</p>
+<div class="codehilite"><pre><span></span>$ mkdir congress
+$ <span class="nb">cd</span> congress/
+$ wget https://theunitedstates.io/congress-legislators/legislators-current.csv
+</pre></div>
+
+<ul>
+<li>Post process your data (if necessary)</li>
+</ul>
+<p>For example, if the file that you downloaded is a tar file, you can untar it here. Or you can download multiple files and organize them here. Or you could open up a Jupyter notebook within this session and transform your data even further. Just make sure to clean up the <code class="codehilite">/output</code> directory so that only the files that you want in your dataset are present there.</p>
+<div class="codehilite"><pre><span></span>Untar the files to the current dir
+
+$ tar xvzf train-images-idx3-ubyte.gz
+
+Remove the tar file
+
+$ rm -rf train-images-idx3-ubyte.gz
+
+Ensure that only the files you want are present in `/output`
+
+$ ls /output
+</pre></div>
+
+<h3 id="step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output">Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output<a class="headerlink" href="#step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output" title="Permanent link">&para;</a></h3>
+<p>Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the <code class="codehilite">Create Dataset</code> button on the <code class="codehilite">Output</code> tab to open a modal that will help you turn this output into a FloydHub dataset.</p>
+<p><img alt="Job Output Page" src="../../img/output.png" /></p>
+<p>The modal will ask if you'd like to copy this output to one of your existing datasets or create a new dataset entirely.</p>
+<p><img alt="Create Dataset Modal" src="../../img/modal.png" /></p>
+<p>Click the <code class="codehilite">Create Dataset from Output</code> button once you're ready, and you'll be navigated to your newly created Dataset on FloydHub.</p>
                 
                   
                 

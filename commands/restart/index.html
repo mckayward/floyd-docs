@@ -750,18 +750,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../../guides/shortnames/" title="Using Shortened Job and Dataset Names" class="md-nav__link">
+      Using Shortened Job and Dataset Names
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" checked>
     
-    <label class="md-nav__link" for="nav-8-3">
+    <label class="md-nav__link" for="nav-8-4">
       CLI Commands
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-8-3">
+      <label class="md-nav__title" for="nav-8-4">
         CLI Commands
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1298,6 +1310,7 @@ restart/re-run a previous job with different <code class="codehilite">[OPTIONS]<
 instance type), or override its <code class="codehilite">[COMMAND]</code>.</p>
 <p>When using <code class="codehilite">floyd restart</code>, a copy of your code is not uploaded (since the code
 of the previous job is used). This can save on startup time.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span># Override the command
 $ floyd restart mckay/projects/mnist/1 &quot;python train.py&quot;
@@ -1308,7 +1321,7 @@ $ floyd restart mckay/projects/mnist/1 --gpu
 </pre></div>
 
 <div class="codehilite"><pre><span></span># Run the job with a new version of a dataset
-$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
+$ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/1:mnist
 </pre></div>
 
 <hr />
